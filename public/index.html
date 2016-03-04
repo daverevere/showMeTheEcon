@@ -41,7 +41,7 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="home">
 
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -58,16 +58,30 @@
      
             <div class="collapse navbar-collapse navbar-center navbar-main-collapse">
                 <ul class="nav navbar-nav">
-                    
-                    <li class="hidden">
-                        <a href="#page-top"></a>
+                
+                    <!-- <li> <a class="page-scroll" >Macro </a> </li> -->
+                    <!-- <li> <a class ="page-scroll" >Micro</a> </li> -->
+                     <li class="dropdown">
+                      <a class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" scrollTo="#macro" class="page-scroll">
+                        Macro
+                        <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li ng-click="filterResources('college','Video')" ng-repeat="topic in macro"><a ng-href="#topics/{{topic.link}}">{{topic.title}} hi</a></li>
+                      </ul>
                     </li>
-                    <li>
-                        <a class="page-scroll" scrollTo="#macro">Macro</a>
+
+                     <li class="dropdown">
+                      <a class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"  scrollTo="#micro" class="page-scroll" >
+                        Micro
+                        <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li ng-click="filterResources('college','Video')"ng-repeat="topic in micro"><a ng-href="#topics/{{topic.link}}">{{topic.title}} hi</a></li>
+                      </ul>
                     </li>
-                    <li>
-                        <a class ="page-scroll" scrollTo="#micro">Micro</a>
-                    </li>
+
+
              
                 </ul>    
                   <div class="nav navbar-nav">   

@@ -5,10 +5,12 @@ app.config(function($routeProvider) {
     
     $routeProvider
     .when('/', {
-        templateUrl: 'components/home/home.html'
+        templateUrl: 'components/home/home.html',
+        controller: 'home'
     })
-    .when('/topics', {
+    .when('/topics/:topicTitle', {
         templateUrl: 'components/topics/topics.html',
         controller : "topics"
     })
-})
+    .otherwise("/");
+});

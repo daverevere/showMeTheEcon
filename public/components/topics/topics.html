@@ -1,6 +1,6 @@
     <!-- Economic Section -->
 
-    <section class="featured container content-section text-center">
+    <section class="featured container content-section text-center container">
         <div class="row">
             <div class="col-lg-5 col-md-5 col-sm-5 col-lg-offset-1 col-md-offset-1">
                 <h2>Featured Economic Resource</h2>
@@ -15,18 +15,83 @@
     </section>
     <hr style ="border-top: 2px solid rgba(255,255,255,.6); margin:20px">      
 
-    <section>
+    <section class="container">
         <div class="row"  >
-                
+                <div>
+
                 <h3>{{topics[0].title}}</h3>
                 <p>{{topics[0].description}}</p>
-                <p>{{topics[0].subject}}</p>
+                <p>Subject : {{topics[0].subject}}</p>
+                <br>
+                <hr style ="border-top: 2px solid rgba(255,255,255,.6); margin:20px">      
                 
-                <div ng-repeat="item in topics[0].resources"> 
-                    <h4> {{item.title}}</h4>
-                    <h4> {{item.description}}</h4>
-                    <h4> {{item.grade}}</h4>
-                    <h4> {{item.link}}</h4>
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li class="dropdown">
+                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Elementary
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li ng-click="filterResources('elem','Video')"><a >Video</a></li>
+                        <li ng-click="filterResources('elem','Audio')"><a >Audio</a></li>
+                        <li ng-click="filterResources('elem','Literature')"><a >Literature</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li ng-click="filterResources('elem')" ><a >All</a></li>
+                      </ul>
+                    </li>
+
+                     <li class="dropdown">
+                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        High School
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li ng-click="filterResources('hs','Video')"><a >Video</a></li>
+                        <li ng-click="filterResources('hs','Audio')"><a >Audio</a></li>
+                        <li ng-click="filterResources('hs','Literature')"><a >Literature</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li ng-click="filterResources('hs')" ><a >All</a></li>
+                      </ul>
+                    </li>
+
+                     <li class="dropdown">
+                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        College
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li ng-click="filterResources('college','Video')"><a >Video</a></li>
+                        <li ng-click="filterResources('college','Audio')"><a >Audio</a></li>
+                        <li ng-click="filterResources('college','Literature')"><a >Literature</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li ng-click="filterResources('college')" ><a>All</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <form class="nav-search" role="search">
+                            <div class="form-group">
+                              <input ng-model='searchFilter' type="text" class="form-control" placeholder="Search">
+                            </div>
+                        </form>
+                    </li>
+                  </ul>
+
+
+                </div>
+
+                <div 
+                    class="topic-resources"
+                    ng-repeat="item in topics[0].resources| filter: gradeFilter | filter: mediaFilter | filter: searchFilter"> 
+                    <div class="resource">
+                        <h4> <a ng-href="{{item.link}}" target="_blank">{{item.title}}</a></h4>
+                        <hr style ="border-top: 2px solid rgba(255,255,255,.6)">      
+    
+                        <h4> {{item.description}}</h4>
+                        <h4> {{item.grade}}</h4>
+                    </div>
+
                 </div>
             
                 
