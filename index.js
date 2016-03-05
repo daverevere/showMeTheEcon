@@ -1,24 +1,34 @@
 "strict mode";
-var express = require('express');
+var express = require('express');//we use require to access the modules listed in our package.json. Require automatically knows to look for the specified module in node_modules
 var port = 2000;
-var app = express();
+var server = express();//express is a function. Here, we're assigning the express function to server.
 
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-var session = require('express-session');
-
+var bodyParser = require('body-parser');// Parses body of ajax || route . 
+var mongoose = require('mongoose'); 
+var session = require('express-session'); // Allows us to have cookies 
 
 mongoose.connect('mongodb://localhost/econ');
+var topics = require('./models/topics.js');//this is how we access our database. we're designating the specific location of our database for require to look up.
 
-app.use(bodyParser.json({limit: '50mb'}));
-app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
-app.use(express.static(__dirname + '/public'));
+var unemployment = new topics();//create a new instance of our topic model
+unemployment.subject = "Macro";
+unemployment.title = "Unemployment";
+unemployment.description="This is a description of unemployment.";
+unemployment.icon="imgage link";
+unemployment.resources=[];
 
-app.use(session({
+server.use(bodyParser.json({limit: '50mb'}));
+server.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
+server.use(express.static(__dirname + '/public'));
+
+server.use(session({
     secret: "somethingC0mPl1Cat3dMayb3",
     resave: false,
     saveUninitialized: true,
 }));
 
+server.get('/',function (req,res) {
+	
+});
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+server.listen(port, () => console.log(`Server running on port ${port}`));

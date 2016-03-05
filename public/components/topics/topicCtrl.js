@@ -1,7 +1,9 @@
+
 (function () {
     'use strict';
 
     
+    //$routeParams comes with ngRoute. We use it to create dynamic paths by including ":routename" in our routeprovider.
     app.controller("topics",["$scope","$routeParams",function($scope,$routeParams){
 
         $scope.mediaFilter = '';
@@ -15,15 +17,15 @@
           //let's set up one view for an actual subtopic
 
         // $scope.topic = topics[Suppy]
-        console.log($routeParams.topicTitle);
+        $scope.topicTitle = $routeParams.topicTitle;
 
-        $scope.topics = [
+        $scope.topics = [ 
         {
             subject : "Macro",
             title   : "Supply, demand, and market equilibrium",
             description: "The core ideas in microeconomics.  Supply, demand and equilibrium.",
             resources:  [
-                {type: "video", title: "Video 1", description: "lorm ipsum blah bala", grade : "elem",link : "https://www.khanacademy.org/economics-finance-domain/microeconomics/supply-demand-equilibrium", source : "khanacademy", rating: 0, icon : "link",comments : []},
+                {type: "video", title: "Video 1", description: "lorm ipsum blah bala", grade : ["elem","hs"],link : "https://www.khanacademy.org/economics-finance-domain/microeconomics/supply-demand-equilibrium", source : "khanacademy", rating: 0, icon : "link",comments : []},
                 {type: "audio", title: "Audio 1", description: "lorm ipsum blah bala", grade : "elem",link : "https://www.khanacademy.org/economics-finance-domain/microeconomics/supply-demand-equilibrium", source : "khanacademy", rating: 0, icon : "link",comments : []},
                 {type: "video", title: "Video 2", description: "lorm ipsum blah bala", grade : "elem",link : "https://www.khanacademy.org/economics-finance-domain/microeconomics/supply-demand-equilibrium", source : "khanacademy", rating: 0, icon : "link",comments : []},
                 {type: "audio", title: "Audio 2", description: "lorm ipsum blah bala", grade : "elem",link : "https://www.khanacademy.org/economics-finance-domain/microeconomics/supply-demand-equilibrium", source : "khanacademy", rating: 0, icon : "link",comments : []},
