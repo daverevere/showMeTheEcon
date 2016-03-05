@@ -4,7 +4,7 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
+                    <div class="col-md-8 col-md-offset-3">
                     
                         <p class="intro-text">A big, beautiful sentence that says what this site is about on one or two lines.</p>
                         <a  class="page-scroll" scrollTo="#latest">
@@ -24,121 +24,130 @@
         <div class="row">
             <div class="col-lg-5 col-md-5 col-sm-5 col-lg-offset-1 col-md-offset-1">
                 <h2>Featured Resource</h2>
-                <p>FiberFix</p>
+                <p>Fiberfix is perfect for illustrating micro concepts to elementary school kids. Play the video for my review of this featured resource.</p>
                 <img src="img/intro-bg.jpg" alt="TV" style = "width: 350px; height: 200px">
                 
             </div>
             
             <div class="col-lg-5 col-md-5 col-sm-5 col-lg-offset-right-1 col-md-offset-right-1">
-                <img src="img/tv.jpg" alt="TV" style = "width: 400px; height: 390px">
+                <img border="5" src="img/tv.jpg" alt="TV" style = "width: 400px; height: 390px; border-width:5px">
             </div>
         </div>
         <hr style ="border-top: 2px solid rgba(255,255,255,.6); margin:20px">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4" style="border-right: rgba(255,255,255,.6) solid; height:140px;">
-                <p>This is a sentence about Slawsa.</p>
+                <p>Shark Tank clip that teaches you about elasticity.</p>
             <img src="img/intro-bg.jpg" alt="TV" style = "width: 200px; height: 90px">
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4" style="border-right: rgba(255,255,255,.6) solid; height:140px;">
-                <p>This is a sentence about Slawsa.</p>
+                <p>A nice audio resource about supply and demand.</p>
             <img src="img/intro-bg.jpg" alt="TV" style = "width: 200px; height: 90px">
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
-                <p>This is a sentence about Slawsa.</p>
+                <p>Engaging video for millenials featuring an entrepreneur.</p>
             <img src="img/intro-bg.jpg" alt="TV" style = "width: 200px; height: 90px">
             </div>
-            <a href="#macro" class="page-scroll">
-                            <span class="arrow glyphicon glyphicon-menu-down"></span>
+            <a scrollTo="#macro" class="page-scroll">
+                            <i class="arrow fa fa-angle-down"></i>
                             
                         </a>
         </div>
     </section>
     <!-- Macro Section -->    
-    <section id="macro" class="featured container content-section text-center">
-        <div class="row">
-        <div class="col-lg-1 col-md-1 col-sm-1 col-lg-offset-4 col-md-offset-4 col-sm-offset-4">
-                <img src="img/intro-bg.jpg" alt="TV" style = "width: 550px; height: 300px">
-            </div>
-            
-        </div>
-        <div class="row">
-            <div class="col-lg-2 col-md-2 col-sm-2 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
-                <h2><a href="#topics">Subtopic One</a></h2>
-                
-
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-2">
-                <h2>Subtopic Two</h2>
-                
-
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-2">
-                <h2>Subtopic Three</h2>
-                
-
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-2">
-                <h2>Subtopic Four</h2>
-                
-
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-2 col-lg-offset--right-1 col-md-offset--right-1">
-                <h2>Subtopic Five</h2>
-                
-         </div>
-            <a href="#macro" class="page-scroll">
-                            <span class="arrow glyphicon glyphicon-menu-down"></span>
-                            
-                        </a>
+    <section id="macro" class="macro container content-section text-center">
         
-            
+        <h1 class="macro-title">Macroeconomics</h1>
+       <div class="row"> 
+        <div class="col-lg-4 col-md-4 col-sm-4">
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2><a ng-show="hover" href="#topics">Unemployment</a></h2>
+                
+                <h2><a ng-show="hover" href="#topics">Inflation</a></h2>
+                
+                <h2><a ng-show="hover" href="#topics">Money and Banking</a></h2>
+
         </div>
-        <hr style ="border-top: 2px solid rgba(255,255,255,.6); margin:20px">
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+                <i ng-mouseover="hover = true" ng-mouseleave="hover = false" class="globe fa fa-globe"></i>
+        </div>
+            
+           
+            <div class="col-lg-4 col-md-4 col-sm-4">
+            <br>
+                <br>
+                <br>
+                <br>
+               <h2><a ng-show="hover" href="#topics">Economic Growth</a></h2>
+               <h2><a ng-show="hover" href="#topics">Fiscal and Monetary Policy</a></h2>
+               <h2><a ng-show="hover" href="#topics">International Economics</a></h2>                 
+        </div>
+
+        </div>
+           
+        
+        
+        <a scrollTo="#micro" class="page-scroll">
+                            <i class="arrow fa fa-angle-down"></i>
+                            
+                        </a>  
     
     </section>
         
     <!-- Micro Section -->    
-    <section id="micro" class="featured container content-section text-center">
-        <div class="row">
-        <div class="col-lg-1 col-md-1 col-sm-1 col-lg-offset-4 col-md-offset-4 col-sm-offset-4">
-                <img src="img/intro-bg.jpg" alt="TV" style = "width: 550px; height: 300px">
-            </div>
-            
+    <section id="micro" class="macro container content-section text-center">
+        
+        <h1 class="macro-title">Microeconomics</h1>
+       <div class="row"> 
+        <div class="col-lg-3 col-md-3 col-sm-3">
+                <br>
+                <br>
+              <div class="reveal">
+                <h2><a  class="reveal" ng-show="hover" href="#topics">Foundations</a></h2>
+                </div>
+                <h2><a ng-show="hover" href="#topics">Gains from Trade</a></h2>
+                
+                <h2><a ng-show="hover" href="#topics">Supply & Demand</a></h2>
+                <h2><a ng-show="hover" href="#topics">Elasticity</a></h2>
+                <h2><a ng-show="hover" href="#topics">Price Controls</a></h2>
+
         </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-6">
+                <i ng-mouseover="hover = true" ng-mouseleave="hover = false" class="fa fa-university"></i>
+        </div>
+            
+           
+            <div class="col-lg-3 col-md-3 col-sm-3 ">
+            <br>
+                <br>
+               
+               <h2><a ng-show="hover" href="#topics">Externalities & Public Goods</a></h2>
+               <h2><a ng-show="hover" href="#topics">Costs & Production</a></h2>
+               <h2><a ng-show="hover" href="#topics">Market Structure</a></h2>
+               <h2><a ng-show="hover" href="#topics">Labor</a></h2>
+               <h2><a ng-show="hover" href="#topics">Behavioral Economics</a></h2>                 
+        </div>
+
+        </div>
+        
         <div class="row">
-            <div class="col-lg-2 col-md-2 col-sm-2 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
-                <h2>Subtopic One</h2>
-                
 
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-2">
-                <h2>Subtopic Two</h2>
-                
+        
 
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-2">
-                <h2>Subtopic Three</h2>
-                
+        <br>
 
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-2">
-                <h2>Subtopic Four</h2>
-                
-
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-2 col-lg-offset--right-1 col-md-offset--right-1">
-                <h2>Subtopic Five</h2>
-                
-         </div>
-            <a href="#macro" class="page-scroll">
-                            <span class="arrow glyphicon glyphicon-menu-down"></span>
+          <a scrollTo="#page-top" class="page-scroll">
+                            <p style="text-align:center">Scroll back to the top</p>
                             
                         </a>
-        
-            
-        </div>
-        <hr style ="border-top: 2px solid rgba(255,255,255,.6); margin:20px">
-    
+        </div>   
     </section>
+     
+        <hr style ="border-top: 2px solid rgba(255,255,255,.6); margin:20px">
+ 
 </div>
 <script src="js/app.js"></script>

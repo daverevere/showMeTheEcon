@@ -20,6 +20,16 @@ $(function() {
 
 app.controller('home', ['$scope', function ($scope) {
 
+$scope.hover = false;
+//     $scope.hoverIn = function(){
+//     $scope.hoverEdit = true;
+// };
+
+// $scope.hoverOut = function(){
+//     $scope.hoverEdit = false;
+// };
+
+
     $scope.micro = [
     {title: "Foundations", link : "Foundations"}, 
     {title: "Gains frtom Trade", link : "Gains"}, 

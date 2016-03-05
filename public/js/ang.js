@@ -1,5 +1,5 @@
 
-var app = angular.module('econ', ['ngRoute']);
+var app = angular.module('econ', ['ngRoute', 'ngAnimate']);
 
 app.config(function($routeProvider) {
     

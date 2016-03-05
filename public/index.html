@@ -18,7 +18,7 @@
     <link href="css/styles.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     
@@ -32,6 +32,7 @@
 
     <script src="vendor/angular/angular.min.js"></script>
     <script src="vendor/angular-route/angular-route.min.js"></script>
+    <script src="vendor/angular-animate/angular-animate.min.js"></script>
 
 
     <!--[if lt IE 9]>
@@ -50,34 +51,32 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
+                <a class="navbar-brand page-scroll" scrollTo="#page-top">
                     <i class="fa fa-play-circle"></i>  <span class="light">Show me<br>the Econ!</span>
                 </a>
             </div>
 
      
             <div class="collapse navbar-collapse navbar-center navbar-main-collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav topics">
                 
                     <!-- <li> <a class="page-scroll" >Macro </a> </li> -->
                     <!-- <li> <a class ="page-scroll" >Micro</a> </li> -->
-                     <li class="dropdown">
-                      <a class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" scrollTo="#macro" class="page-scroll">
+                     <li class="dropdown topics">
+                      <a class="btn btn-default dropdown-toggle topics" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="page-scroll" scrollTo="#macro">
                         Macro
-                        <span class="caret"></span>
                       </a>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li ng-click="filterResources('college','Video')" ng-repeat="topic in macro"><a ng-href="#topics/{{topic.link}}">{{topic.title}} hi</a></li>
+                      <ul class="dropdown-menu topics" aria-labelledby="dropdownMenu1">
+                        <li ng-click="filterResources('college','Video')" ng-repeat="topic in macro"><a ng-href="#topics/{{topic.link}}">{{topic.title}}</a></li>
                       </ul>
                     </li>
 
-                     <li class="dropdown">
-                      <a class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"  scrollTo="#micro" class="page-scroll" >
+                     <li class="dropdown topics">
+                      <a class="btn btn-default dropdown-toggle topics" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"  scrollTo="#micro" class="page-scroll" >
                         Micro
-                        <span class="caret"></span>
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li ng-click="filterResources('college','Video')"ng-repeat="topic in micro"><a ng-href="#topics/{{topic.link}}">{{topic.title}} hi</a></li>
+                       </a>
+                      <ul class="dropdown-menu topics" aria-labelledby="dropdownMenu1">
+                        <li ng-click="filterResources('college','Video')"ng-repeat="topic in micro"><a ng-href="#topics/{{topic.link}}">{{topic.title}}</a></li>
                       </ul>
                     </li>
 
