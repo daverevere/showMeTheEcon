@@ -4,12 +4,12 @@
         <div class="row">
             <div class="col-lg-5 col-md-5 col-sm-5 col-lg-offset-1 col-md-offset-1">
                 <h2>Featured Unemployment Resource</h2>
-                <p>FiberFix</p>
-                <img src="../img/intro-bg.jpg" alt="TV" style = "width: 350px; height: 200px">
+                <p>{{feature[0].gsx$featured.$t}}</p>
+                <img ng-src="{{feature[0].gsx$icon_2.$t}}" alt="Feature Image" style = "width: 350px; height: 200px">
             </div>
             
             <div class="col-lg-5 col-md-5 col-sm-5 col-lg-offset-right-1 col-md-offset-right-1">
-                <p>This is some text about this featured resource.</p>
+                <p>{{feature[0].gsx$description.$t}}</p>
             </div>
         </div>
     </section>
@@ -83,12 +83,12 @@
 
                 <div 
                     class="topic-resources"
-                    ng-repeat="item in topics[0].resources| filter: gradeFilter | filter: mediaFilter | filter: searchFilter"> 
+                    ng-repeat="item in resources| filter: gradeFilter | filter: mediaFilter | filter: searchFilter"> 
                     <div class="resource">
-                        <h4> <a ng-href="{{item.link}}" target="_blank">{{item.title}}</a></h4>
+                        <h4> <a ng-href="{{item.link}}" target="_blank">{{item.gsx$title.$t}}</a></h4>
                         <hr style ="border-top: 2px solid rgba(255,255,255,.6)">      
     
-                        <p> {{item.description}}</p>
+                        <p> {{item.gsx$description.$t}}</p>
                     </div>
 
                 </div>
