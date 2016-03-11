@@ -17,6 +17,43 @@ html {
     height: 100%;
 }
 
+.btn-pink {
+    color: #ffffff;
+    background-color: rgb(240, 24, 132);
+    border-color: #130269;
+    border-radius: 5px !important;
+    text-align: left !important;
+    align:left !important;
+}
+
+.filter-drop {
+    background: rgba(255,255,255,.6) !important;
+    text-transform: uppercase;
+    color:black !important;
+    font-weight: bolder !important;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.filter-button {
+    margin-right: 6px;
+    padding: 8px;
+    color: black !important;
+    font-weight: bold !important;
+    font-size: 17px;
+    border: 0px !important;
+    background: rgba(255,255,255,.6) !important;
+    border-radius: 5px !important;
+}
+
+
+
+
+
+.feature-title {
+    font-size: 60px !important;
+    color: white !important;
+}
+
 h1 {
 
     text-transform: uppercase;
@@ -28,9 +65,9 @@ h1 {
     z-index: 0;
 }
 
+
 h2,
 h3,
-h4,
 h5,
 h6 {
     margin: 0 0 35px;
@@ -39,6 +76,13 @@ h6 {
     font-weight: 700;
     font-size: 28px;
     letter-spacing: 1px;
+}
+
+h4 {
+    margin: 0 0 25px;
+    font-size: 42px;
+    line-height: 1;
+    font-weight: bold;
 }
 
 p {
@@ -83,8 +127,6 @@ img {
   transition:all ease-out 0.5s;
   opacity: 0;
 }
-
-
 
 
 a {
@@ -195,9 +237,15 @@ a:focus {
 }
 
 .topics {
-    background: transparent;
+    background: rgba(255,255,255,.3) !important;
     border: 0 !important;
     border-color: transparent;
+}
+
+.topics-menu {
+    background-color: transparent;
+    border-color: transparent;
+    border: 0 !important;
 }
 
 .topics:after {
@@ -264,7 +312,7 @@ a:focus {
        display: table;
     width: 100%;
     height: auto;
-    padding: 90px !important;
+    padding: 90px 90px 20px 90px!important;
     text-align: center;
     color: #000;
     background-color: ;
@@ -495,3 +543,24 @@ div[ng-view]{
     padding: 10px;
     background: rgba(255,255,255,.3);
 }
+
+.nav-tabs {
+    border-bottom: 0;
+}
+
+.feature-image {
+    float: left;
+    margin-right:15px;
+
+}
+
+.feature-text {
+
+  text-align: left;
+};
+
+.feature-space {
+  padding-bottom: 0px;
+
+};
+
