@@ -86,13 +86,13 @@
 
                 </div>
                 <br>
-                <div 
+                <div
                     class="topic-resources"
                     ng-repeat="item in resources| filter: gradeFilter | filter: mediaFilter | filter: searchFilter">
                     <div class="resource">
-                        <h3> <a ng-href="{{item.gsx$link.$t}}" target="_blank">{{item.gsx$title.$t}}</a></h3>
-                        <hr style ="border-top: 2px solid rgba(255,255,255,.6)">      
-    
+                        <h4> <a ng-href="{{item.gsx$link.$t}}" target="_blank">{{item.gsx$title.$t}}</a></h4>
+                        <hr style ="border-top: 2px solid rgba(255,255,255,.6)">
+
                         <p> {{item.gsx$description.$t}}</p>
                     </div>
 

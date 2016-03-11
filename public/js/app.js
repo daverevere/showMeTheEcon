@@ -15,7 +15,7 @@ $(document).ready(collapseNavbar);
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     var pageScroll = $('a.page-scroll')
-        
+
         pageScroll.bind('click', function(event) {
         var $anchor = $(this);
         console.log($anchor.attr('scrollTo'))
@@ -34,7 +34,7 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 app.controller('indexCtrl', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
-    $scope.macro = [];   
+    $scope.macro = [];
     $scope.micro = [];
 
 
@@ -55,7 +55,7 @@ app.controller('indexCtrl', ['$scope', '$http', '$routeParams', function($scope,
                     $scope.micro.push(element)
                 }
             });
-            // here i will go through each topic and find where 
+            // here i will go through each topic and find where
             $scope.feature = $scope.topics.filter(function (el) {
                 // the link matches my routeParams.topicsTitle
                  if (el.gsx$link.$t === $routeParams.topicTitle) {
@@ -67,6 +67,6 @@ app.controller('indexCtrl', ['$scope', '$http', '$routeParams', function($scope,
 
 
 
-        });   
+        });
 
 }]);
