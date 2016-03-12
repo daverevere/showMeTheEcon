@@ -70,9 +70,7 @@
             </ul>
         </div>
         <br>
-        <div
-            class="topic-resources"
-            ng-repeat="item in resources| filter: gradeFilter | filter: mediaFilter | filter: searchFilter">
+        <div class="topic-resources" ng-repeat="item in resources| filter: gradeFilter | filter: mediaFilter | filter: searchFilter">
             <div class="resource">
                 <h4> <a ng-href="{{item.link}}" target="_blank">{{item.title}}</a></h4>
                 <hr style ="border-top: 2px solid rgba(255,255,255,.6)">
