@@ -1,124 +1,81 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="econ">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Show me the econ</title>
-
-    <!-- Bootstrap -->
-    <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    
-    <script src="vendor/jquery/dist/jquery.js"></script>
-
-   
-    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-
-   
-    <script src="vendor/jquery.easing/js/jquery.easing.min.js"></script>
-
-    <script src="vendor/angular/angular.min.js"></script>
-    <script src="vendor/angular-route/angular-route.min.js"></script>
-    <script src="vendor/angular-animate/angular-animate.min.js"></script>
-
-
-    <!--[if lt IE 9]>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Show me the econ</title>
+        <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <script src="vendor/jquery/dist/jquery.js"></script>
+        <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="vendor/jquery.easing/js/jquery.easing.min.js"></script>
+        <script src="vendor/angular/angular.min.js"></script>
+        <script src="vendor/angular-route/angular-route.min.js"></script>
+        <script src="vendor/angular-animate/angular-animate.min.js"></script>
+        <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="indexCtrl">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        
-
+        <![endif]-->
+    </head>
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="indexCtrl">
+        <!-- Navigation -->
+        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+            
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
+                <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" scrollTo="#page-top">
-                   <img src="img/tv.png" alt="TV" style = "border: 0; width: 150px; height: 150px; border-width:5px">
+                    <img src="img/tv.png" alt="TV" style = "border: 0; width: 150px; height: 150px; border-width:5px">
                 </a>
             </div>
-<div class="container">
-     
-            <div class="collapse navbar-collapse navbar-center navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                
-                    <!-- <li> <a class="page-scroll" >Macro </a> </li> -->
-                    <!-- <li> <a class ="page-scroll" >Micro</a> </li> -->
-                     <li class="dropdown">
-                      <a class="btn btn-default dropdown-toggle topics-menu navbar-subjects" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="page-scroll" scrollTo="#macro">
-                        Macro
-                      </a>
-                      <ul class="dropdown-menu topics" aria-labelledby="dropdownMenu1">
-
-                          <li ng-repeat="topic in macro "><a ng-href="#topics/{{topic.gsx$link.$t}}">{{topic.gsx$title.$t}}</a></li>
-                        <!-- //why is the filterResources function here? -->
-                   <!--  ng-href sees #topics and knows to go to the topics view with the name of the link it finds in the macro collection in the homeCtrl. It will then display the title property found in that collection. Then, once it goes to the topics view, control is passed to topicCtrl. -->
-                      </ul>
-                    </li>
-
-                     <li class="dropdown">
-                      <a class="btn btn-default dropdown-toggle topics-menu navbar-subjects" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"  scrollTo="#micro" class="page-scroll" >
-                        Micro
-                       </a>
-                      <ul class="dropdown-menu topics" aria-labelledby="dropdownMenu1">
-                        <li ng-repeat="topic in micro "><a ng-href="#topics/{{topic.gsx$link.$t}}">{{topic.gsx$title.$t}}</a></li>
-                      </ul>
-                    </li>
-
-
-             
-                </ul>    
-                  <div class="nav navbar-nav">   
-                    
+            <div class="container">
+                <div class="collapse navbar-collapse navbar-center navbar-main-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a class="btn btn-default dropdown-toggle topics-menu navbar-subjects" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="page-scroll" scrollTo="#macro">
+                                Macro
+                            </a>
+                            <ul class="dropdown-menu topics" aria-labelledby="dropdownMenu1">
+                                <li ng-repeat="topic in macro "><a ng-href="#topics/{{topic.gsx$link.$t}}">{{topic.gsx$title.$t}}</a></li>
+                                <!-- //why is the filterResources function here? -->
+                                <!--  ng-href sees #topics and knows to go to the topics view with the name of the link it finds in the macro collection in the homeCtrl. It will then display the title property found in that collection. Then, once it goes to the topics view, control is passed to topicCtrl. -->
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="btn btn-default dropdown-toggle topics-menu navbar-subjects" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"  scrollTo="#micro" class="page-scroll" >
+                                Micro
+                            </a>
+                            <ul class="dropdown-menu topics" aria-labelledby="dropdownMenu1">
+                                <li ng-repeat="topic in micro "><a ng-href="#topics/{{topic.gsx$link.$t}}">{{topic.gsx$title.$t}}</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="nav navbar-nav">
                         <button type="button" class="about btn btn-intro">About your<br> Curator</button>
-                    
-                     
-                
-            </div> 
-                
-            <!-- /.navbar-collapse -->
-            </div>        
-        </div>
-
-        <!-- /.container -->
-    </nav>
-        
-    <div ng-view></div>
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; Show Me the Econ 2016</p>
-        </div>
-    </footer>
-
-   
-
-    
-    <script src="js/ang.js"></script>
-    <script src="js/app.js"></script>
-    <script src="components/topics/topicCtrl.js"></script>
-    <script src="components/home/homeCtrl.js"></script>
-
-
-</body>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+            </div>
+            <!-- /.container -->
+        </nav>
+        <div ng-view></div>
+        <!-- Footer -->
+        <footer>
+            <div class="container text-center">
+                <p>Copyright &copy; Show Me the Econ 2016</p>
+            </div>
+        </footer>        
+        <script src="js/ang.js"></script>
+        <script src="js/app.js"></script>
+        <script src="components/topics/topicCtrl.js"></script>
+        <script src="components/home/homeCtrl.js"></script>
+    </body>
 </html>
