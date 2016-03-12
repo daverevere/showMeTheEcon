@@ -549,6 +549,10 @@
 
 .wobble {
   -webkit-animation-name: wobble;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
   animation-name: wobble;
 }
 
@@ -684,7 +688,7 @@
 }
 
 @keyframes bounceIn {
-  from, 20%, 40%, 60%, 80%, to {
+  from, 20%, 40%, 60%, 80%, 60%, 40% to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
     animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
   }
@@ -716,6 +720,17 @@
     transform: scale3d(.97, .97, .97);
   }
 
+   60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+   40% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9);
+  }
+
   to {
     opacity: 1;
     -webkit-transform: scale3d(1, 1, 1);
@@ -726,6 +741,8 @@
 .bounceIn {
   -webkit-animation-name: bounceIn;
   animation-name: bounceIn;
+  -webkit-animation-duration: 8s;
+  animation-duration: 8s;
 }
 
 @-webkit-keyframes bounceInDown {

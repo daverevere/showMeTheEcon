@@ -623,3 +623,15 @@ div[ng-view]{
 .inline h4 {
     display: inline;
 }
+
+.feature-video {
+ 
+    background-image: url('../img/tv.png') !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+   
+    width: 450px;
+    height:450px;
+}
+
