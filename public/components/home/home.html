@@ -5,53 +5,78 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-3">
-                    
-                        <p class="intro-text">A big, beautiful sentence that says what this site is about on one or two lines.</p>
-                        <a  class="page-scroll" scrollTo="#latest">
-                            <button type="button" class="btn btn-default">
+                    <div ng-show="sentence">
+                        <h3 class="animated fadeOut">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        One or two sentences about the website that fade away after five seconds.</h3>
+                     </div>
+                     
+                    <div ng-show="video">   
+                        <h3 class = "animated fadeIn">
+   <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        And are replaced by whatever you want. A video, an image, or whatever.</h3>
+                                                  <a  class="page-scroll" scrollTo="#latest">
+                            <button type="button" class="btn btn-intro">
                                     See the latest resources
-                        
                             </button>
-                         </a>
+                         </a> 
                     </div>
+
+                    
+                    </div>
+
                 </div>
+
             </div>
         </div>
     </section >
     
     <!-- Latest Resources Section -->
     <section id="latest" class="featured container content-section text-center">
+   
         <div class="row">
-            <div class="col-lg-5 col-md-5 col-sm-5 col-lg-offset-1 col-md-offset-1">
-                <h2>Featured Resource</h2>
-                <p>Fiberfix is perfect for illustrating micro concepts to elementary school kids. Play the video for my review of this featured resource.</p>
-                <img src="img/intro-bg.jpg" alt="TV" style = "width: 350px; height: 200px">
+            <div class="col-lg-6 col-md-6 col-sm-6" style="border-right: rgba(255,255,255,.6) solid; height:430px;"> <h1>Featured</h1>
+            <br>
+                <br>
+                <br>
+                <br>
+            <img src="https://1.bp.blogspot.com/-2kc50czN79c/VsD4hJAvlXI/AAAAAAAAFa0/CQL19XJd1k0/s1600/chem.jpg" alt="TV" style = "float: left; margin-right: 5px; width: 350px; height: 210px">
+                <p style="margin-bottom:0px; text-align: left;">
+
+                Fiberfix is perfect for illustrating micro concepts to elementary school kids. That's why it's this month's featured resource.</p>
+               
                 
             </div>
             
             <div class="col-lg-5 col-md-5 col-sm-5 col-lg-offset-right-1 col-md-offset-right-1">
-                <img border="5" src="img/tv.jpg" alt="TV" style = "width: 400px; height: 390px; border-width:5px">
+                <img border="5" src="img/tv.png" alt="TV" style = " border: 0; width: 380px; height: 380px; border-width:5px; margin-bottom: 40px">
             </div>
         </div>
-        <hr style ="border-top: 2px solid rgba(255,255,255,.6); margin:20px">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4" style="border-right: rgba(255,255,255,.6) solid; height:140px;">
-                <p>Shark Tank clip that teaches you about elasticity.</p>
-            <img src="img/intro-bg.jpg" alt="TV" style = "width: 200px; height: 90px">
+        <hr style ="border-top: 3px solid rgba(255,255,255,.6); margin:10px 0px">
+        <div class="row special">
+            <div class="col-lg-4 col-md-4 col-sm-4" style="border-right: rgba(255,255,255,.6) solid; height:120px;">
+            <img src="http://economics.utah.edu/1economics_1.jpg" alt="TV" style = "margin-right: 4px; float: left; width: 200px; height: 120px"><p style = "font-size: 16px; text-align: left;">Slawsa teaches you about elasticity and supply and demand.</p>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4" style="border-right: rgba(255,255,255,.6) solid; height:140px;">
-                <p>A nice audio resource about supply and demand.</p>
-            <img src="img/intro-bg.jpg" alt="TV" style = "width: 200px; height: 90px">
+            <div class="col-lg-4 col-md-4 col-sm-4" style="border-right: rgba(255,255,255,.6) solid; height:120px;">
+            <img src="img/intro-bg.jpg" alt="TV" style = "margin-right: 4px; float: left; width: 200px; height: 120px"><p style = "font-size: 16px; text-align: left;">Vurtego is nice for elementary and high schoolers.</p>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
-                <p>Engaging video for millennials featuring an entrepreneur.</p>
-            <img src="img/intro-bg.jpg" alt="TV" style = "width: 200px; height: 90px">
+            <img src= "https://www.washcoll.edu/live/image/gid/64/width/650/11491_econ_dollarbill.jpg" alt="TV" style = "margin-right: 4px; float: left; width: 200px; height: 120px"><p style = "font-size: 16px; text-align: left;">Copa Di Vino - this guy is kind of a jerk.</p>
             </div>
-            <a scrollTo="#macro" class="page-scroll">
-                            <i class="arrow fa fa-angle-down"></i>
+        
+        </div>
+            <a scrollTo="#macro" class="arrow page-scroll">
+                            <i class="fa fa-angle-down"></i>
                             
                         </a>
-        </div>
     </section>
     <!-- Macro Section -->    
     <section id="macro" class="macro container content-section text-center">

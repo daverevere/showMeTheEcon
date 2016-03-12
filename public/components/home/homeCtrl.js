@@ -18,9 +18,20 @@
 
 
 
-app.controller('homeCtrl', ['$scope', function ($scope) {
+app.controller('homeCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
 
     $scope.hover = false;
+
+    $scope.sentence = true;
+    $scope.video = false;
+
+    $timeout(function() {
+    	$scope.sentence = false;
+    	$scope.video = true;
+
+    }, 5500)
+
+
 }]);
 
 

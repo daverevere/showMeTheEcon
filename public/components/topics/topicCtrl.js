@@ -24,25 +24,53 @@
 
 
 
-        });   
+        });
+
+        // $scope.url = 'https://spreadsheets.google.com/feeds/list/1VRch1vAe9vrZytWTcm_JboMLdXx26os10nLBEjKrUUE/default/public/values?alt=json';
+        // $http.get($scope.url)
+        // .then(function(res){
+        //     var entries = res.data.feed.entry;
+        //     //console.log(res.data);
+
+        //     for(var item in entries) {
+        //        //console.log(entries[item].gsx$topic.$t, $routeParams.topicTitle);
+        //        //  console.log(entries[item]);
+
+        //         if(entries[item].gsx$topic.$t === $routeParams.topicTitle){
+        //             $scope.resources.push(entries[item]);
+        //         };
+        //     };
+
+        //     // console.log(res.data, res);
+        // });
 
         $scope.url = 'https://spreadsheets.google.com/feeds/list/1VRch1vAe9vrZytWTcm_JboMLdXx26os10nLBEjKrUUE/default/public/values?alt=json';
         $http.get($scope.url)
-        .then(function(res){
-            var entries = res.data.feed.entry;
-            //console.log(res.data);
+            .then(function(res){
+                var entries = res.data.feed.entry;
+                $scope.resources = entries.filter(function (el,inn) {
+                    if(entries[inn].gsx$topic.$t === $routeParams.topicTitle){
+                        return true;
+                    }
+                }).map(function (el,inn) {
+                    var out = {};
+                    out.comments = el.gsx$comments.$t;
+                    out.description = el.gsx$description.$t;
+                    out.featured = el.gsx$featured.$t;
+                    out.grade = el.gsx$grade.$t;
+                    out.icon = el.gsx$icon.$t;
+                    out.link = el.gsx$link.$t;
+                    out.rating = el.gsx$rating.$t;
+                    out.source = el.gsx$source.$t;
+                    out.subject = el.gsx$subject.$t;
+                    out.title = el.gsx$title.$t;
+                    out.topic = el.gsx$topic.$t;
+                    out.type = el.gsx$type.$t;
+                    return out;
+                });
 
-            for(var item in entries) {
-               //console.log(entries[item].gsx$topic.$t, $routeParams.topicTitle);
-               //  console.log(entries[item]);
-
-                if(entries[item].gsx$topic.$t === $routeParams.topicTitle){
-                    $scope.resources.push(entries[item]);
-                };
-            };
-
-            // console.log(res.data, res);
-        });
+console.log($scope.resources);
+            });
 
 
         $scope.mediaFilter = '';
@@ -52,7 +80,7 @@
         $scope.filterResources = function (grade, media){
             $scope.gradeFilter = grade;
             $scope.mediaFilter = media;
-            console.log($scope.gradeFilter, $scope.mediaFilter )
+            
         };//how can we implement filtering for resources that may have more than one grade assigned to them?,
         //let's set up one view for an actual subtopic
 
