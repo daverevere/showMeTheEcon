@@ -1,17 +1,17 @@
 <!-- Economic Section -->
 <section class="featured container content-section text-center container">
     <div class="row">
-        <h1 class="feature-title">Featured {{topicTitle}} Resource</h1>
+        <h1 class="feature-title">Featured {{currentTopic}} Resource</h1>
         <br>
     </div>
     <br>
     <div class="feature-space row">
-        <img class = "feature-image" ng-src="{{feature[0].gsx$icon_2.$t}}" alt="Feature Image" style = "width: 550px; height: 400px">
-        <h4 style="text-align:left;">{{feature[0].gsx$featured.$t}}</h4>
-        <p class = "feature-text">{{feature[0].gsx$description.$t}}
+        <img class = "feature-image" ng-src="{{featuredTopic.icon_2}}" alt="Feature Image" style = "width: 550px; height: 400px">
+        <h4 style="text-align:left;">{{featuredTopic.featured}}</h4>
+        <p class = "feature-text">{{featuredTopic.description}}
             <br>
             <br>
-            <a href="{{feature[0].gsx$link.$t}}" class="btn btn-pink" role="button">Go there now!</a>
+            <a href="{{featuredTopic.link}}" class="btn btn-pink" role="button">Go there now!</a>
         </p>
     </div>
 </section>
@@ -19,7 +19,7 @@
 <section class="container">
     <div class="row" >
         <div>
-            <h3>{{topicTitle}} Resources</h3>
+            <h3>{{currentTopic}} Resources</h3>
             <ul class="nav nav-tabs" role="tablist">
                 <li class="dropdown">
                     <button class="btn btn-default dropdown-toggle filter-button" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -70,11 +70,14 @@
             </ul>
         </div>
         <br>
-        <div class="topic-resources" ng-repeat="item in resources| filter: gradeFilter | filter: mediaFilter | filter: searchFilter">
+        <div class="topic-resources" ng-repeat="resource in resources| filter: gradeFilter | filter: mediaFilter | filter: searchFilter">
             <div class="resource">
-                <h4> <a ng-href="{{item.link}}" target="_blank">{{item.title}}</a></h4>
+                <div class="inline">
+                    <h4> <a ng-href="{{resource.sourcelink}}" target="_blank">{{resource.title}}</a></h4> 
+                    <span>{{resource.grade}}</span>
+                </div>
                 <hr style ="border-top: 2px solid rgba(255,255,255,.6)">
-                <p> {{item.description}}</p>
+                <p> {{resource.description}}</p>
             </div>
         </div>
         

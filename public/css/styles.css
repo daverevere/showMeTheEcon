@@ -19,7 +19,7 @@ html {
 
 .btn-pink {
     color: #ffffff;
-    background-color: rgb(240, 24, 132)
+    background-color: rgb(240, 24, 132);
     border-color: #130269;
     border-radius: 5px !important;
     text-align: left !important;
@@ -617,4 +617,9 @@ div[ng-view]{
 
 };
 
-
+.inline{
+    display: inline;
+}
+.inline h4 {
+    display: inline;
+}
