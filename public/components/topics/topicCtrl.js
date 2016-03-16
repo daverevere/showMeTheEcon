@@ -15,14 +15,14 @@
         // $http.get Will retrive our data from the google sheet
         $http.get(topicsSheetUrl).then(function(res) {
             // then set the data received to $scope.topicSheet
-            $scope.topicsSheet = res.data.feed.entry;
+            var topicsSheet = res.data.feed.entry;
             // featured topics are included in the topicsSheet
             // But we must find the correct featured topic using filter. 
             // matchesCurentPage is a function. Defined at the bottom of the script. 
             // removeGsx$ is a function define at the bottom
             // removeGsx$ cleans the properties in the object provided. 
             // removeGsx$ turns obj.gsx$description.$t to simply obj.description
-            $scope.featuredTopic = $scope.topicsSheet.map(removeGsx$).filter(matchesCurentPage)[0];
+            $scope.featuredTopic = topicsSheet.map(removeGsx$).filter(matchesCurentPage)[0];//filter removes anything that's false
         });
 
         // $http.get Will retrive our data from the google sheet
@@ -44,19 +44,26 @@
             // compares a topic object to the current page RouteParams
             return (topicObj.page === $routeParams.currentTopic)? true : false;
         }
+        
         function removeGsx$ (resourceObj) { 
+           console.log(resourceObj)
             // this function receives an input object (resourceObj) and outputs/returns a new one (newObj)
             // removeGsx$ cleans the properties in the object provided. 
             // removeGsx$ turns obj.gsx$description.$t to simply obj.description
             var newObj = {};
             for(var prop in resourceObj ){
                 if (prop.substring(0,4) === "gsx$"){
+                    // console.log(prop);
                     var str = prop.substring(4,prop.length);
-                    newObj[str] = resourceObj[prop].$t;
+                    // console.log(str)
+                    console.log(resourceObj[prop].$t)
+                    newObj[str] = resourceObj[prop].$t;//newObj gets a str property set to 
                 }
             }
+            // console.log(newObj)
             return newObj;
         }
+
         function deleteProps (inputObj,str1,str2,str3) {
             // this function is not used 
             // We may use it later
@@ -65,6 +72,7 @@
             }
             return inputObj;
         }
+
         function filterResources (grade, media) {
             $scope.gradeFilter = grade;
             $scope.mediaFilter = media;
