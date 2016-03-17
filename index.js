@@ -1,6 +1,6 @@
 "strict mode";
 var express = require('express');//we use require to access the modules listed in our package.json. Require automatically knows to look for the specified module in node_modules
-var port = 2000;
+var port = 3000;
 var server = express();//express is a function. Here, we're assigning the express function to server.
 
 var bodyParser = require('body-parser');// Parses body of ajax || route . 
