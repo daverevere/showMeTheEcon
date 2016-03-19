@@ -1,0 +1,31 @@
+Deploying an app to digital ocean
+1: Put a completed express application on github
+2: after signing up and validating your credit card, click 'Create Droplet'
+3: basic settings (name, size, region)
+4: choose an operating system (you'll probably want to use 'MEAN on 14.04', under the 'applications' tab)
+5: CHECK YOUR EMAIL. It should have the ip address and password for your droplet.
+6: log in to your server with: ssh <username>@<ip address>. Then paste in your password.
+7: Change the password when prompted to do so.
+8: Delete the sample application in /opt/mean.
+9: Clone your own application onto the droplet.
+10: run `npm install` to grab dependencies.
+11: run `npm install -g forever`
+Note:  `npm i forever -g` will produce the same command.
+11: run `npm install -g gulp`
+11: run `npm install -g nodemon`
+11: run `npm install -g bower`
+11.5: once project has been cloned you want to download all the package dependencies by running `npm install` and `bower install`
+Note: If you're on Ubuntu computer as the Root user, you may have to run `bower install --allow-root` 
+12: start your app with `forever start app.js` (or whatever your entry point is)
+13: If anything goes wrong, run `forever list` to view running processes. If something doesn't look right, check the log file!
+14: Need to update the application? Log back in, run `git pull origin master`, and then `forever restart app.js`.
+== Better practices ==
+After logging in the first time, create a new user account, and then disable the root user. 
+Use SSH keys instead of passwords for making the SSH connection.
+== Terminal Tips ==
+When logged in via ssh, there's no graphical interface. Use the command `less` for reading files. Press `q` to exit less.
+`nano` is an easy to use command-line text editor.
+
+
+
+Note: If you're using ES 2015 syntax in your Javascript make sure you have Node 4.0 or newer. You can check your version by running `node -v` command
