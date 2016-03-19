@@ -32,4 +32,4 @@ server.get('/',function (req,res) {
 });
 
 
-server.listen(port, () => console.log(`Server running on port ${port}`));
+server.listen(port, function ()  {console.log('Server running on port ' + 2000);});
