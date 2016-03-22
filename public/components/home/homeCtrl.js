@@ -13,12 +13,17 @@
 // });
 app.controller('homeCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
     $scope.hover = false;
-    $scope.sentence = true;
+    $scope.sentence = false;
     $scope.video = false;
     $timeout(function() {
-    	$scope.sentence = false;
-    	$scope.video = true;
+      $scope.sentence = false;
+      $scope.video = true;
     }, 5500);
+
+  //   $scope.play = function() {
+    // $scope.
+
+  //   }
 }]);
 
 
