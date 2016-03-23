@@ -15,13 +15,13 @@
                             One or two sentences about the website that fade away after five seconds.</h3>
                         </div>
                         <!-- <div ng-show="video"> -->
-                            <h3 class = "animated fadeIn">
+                            <h2 class = "animated fadeIn">
                             <br>
                             <br>
                             <br>
                             <br>
                             <br>
-                            This site is currently under construction.</h3>
+                            This site is currently under construction.</h2>
                             <a  class="page-scroll" scrollTo="#latest">
                                 <button type="button" class="btn btn-intro">
                                 See the latest resources
@@ -32,7 +32,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        
     </section >
     <!-- Latest Resources Section -->
     <section id="latest" class="featured container content-section text-center">
@@ -87,23 +87,32 @@
         
         <h1 class="macro-title">Macroeconomics</h1>
         <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4">
+  <!--           <div class="col-lg-4 col-md-4 col-sm-4">
                 <br>
                 <br>
                 <br>
                 <br>
-                <h2><a ng-show="hover" href="#topics">Unemployment</a></h2>
+
+                  -->
+
+<!--                 <h2><a ng-show="hover" href="#topics">Unemployment</a></h2>
                 
                 <h2><a ng-show="hover" href="#topics">Inflation</a></h2>
                 
-                <h2><a ng-show="hover" href="#topics">Money and Banking</a></h2>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <i ng-mouseover="hover = true" ng-mouseleave="hover = false" class="globe fa fa-globe"></i>
+                <h2><a ng-show="hover" href="#topics">Money and Banking</a></h2> -->
+          <!--   </div>
+            <div class="col-lg-4 col-md-4 col-sm-4"> -->
+                <ul class="macro-page">
+                                <li ng-repeat="topic in macro"><a ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
+                            </ul>
+                          <span class="reveal">
+                <i class="reveal globe fa fa-globe"></i>
+                    </span>
+             
             </div>
             
             
-            <div class="col-lg-4 col-md-4 col-sm-4">
+<!--             <div class="col-lg-4 col-md-4 col-sm-4">
                 <br>
                 <br>
                 <br>
@@ -111,11 +120,8 @@
                 <h2><a ng-show="hover" href="#topics">Economic Growth</a></h2>
                 <h2><a ng-show="hover" href="#topics">Fiscal and Monetary Policy</a></h2>
                 <h2><a ng-show="hover" href="#topics">International Economics</a></h2>
-            </div>
-        </div>
+            </div> -->
         
-        <br>
-        <br>
         <br>
         <a scrollTo="#micro" class="page-scroll">
             <img class ="arrow" src="img/arrow.png">
@@ -129,43 +135,17 @@
         
         <h1 class="macro-title">Microeconomics</h1>
         <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-3">
-                <br>
-                <br>
-                
-                <h2 class="reveal"><a ng-show="hover" href="#topics" ng-animate="reveal">Foundations</a></h2>
-                
-                <h2 class="reveal"><a ng-show="hover" href="#topics" ng-animate="reveal">Gains from Trade</a></h2>
-                
-                <h2 class="reveal"><a ng-show="hover" href="#topics" ng-animate="reveal">Supply & Demand</a></h2>
-                <h2 class="reveal"><a ng-show="hover" href="#topics" ng-animate="reveal">Elasticity</a></h2>
-                <h2 class="reveal"><a ng-show="hover" href="#topics" ng-animate="reveal">Price Controls</a></h2>
+                <ul class="micro-page">
+                                <li ng-repeat="topic in micro"><a ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
+                            </ul>
+                          <span class="reveal">
+                <i class="reveal globe fa fa-university"></i>
+                    </span>
+             
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <i ng-mouseover="hover = true" ng-mouseleave="hover = false" class="fa fa-university"></i>
-            </div>
-            
-            
-            <div class="col-lg-3 col-md-3 col-sm-3 ">
-                <br>
-                <br>
-                
-                <h2 class="reveal"><a ng-show="hover" href="#topics">Externalities & Public Goods</a></h2>
-                <h2 class="reveal"><a ng-show="hover" href="#topics">Costs & Production</a></h2>
-                <h2 class="reveal"><a ng-show="hover" href="#topics">Market Structure</a></h2>
-                <h2 class="reveal"><a ng-show="hover" href="#topics">Labor</a></h2>
-                <h2 class="reveal"><a ng-show="hover" href="#topics">Behavioral Economics</a></h2>
-            </div>
-        </div>
+    
         
-        <div class="row">
-            
-            <br>
-            <a scrollTo="#page-top" class="page-scroll">
-                <p style="text-align:center">Scroll back to the top</p>
-                
-            </a>
-        </div>
+
     </section>
     
     <hr style ="border-top: 2px solid rgba(255,255,255,.6); margin:20px">

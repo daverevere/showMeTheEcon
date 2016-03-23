@@ -13,6 +13,7 @@
 // });
 app.controller('homeCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
     $scope.hover = false;
+    $scope.image = true;
     $scope.sentence = false;
     $scope.video = false;
     $timeout(function() {

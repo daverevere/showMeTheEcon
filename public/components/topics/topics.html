@@ -1,17 +1,17 @@
 <!-- Economic Section -->
-<section class="featured container content-section text-center container">
+<section class="feature-topic container content-section text-center container">
     <div class="row">
         <h1 class="feature-title">Featured {{currentTopic}} Resource</h1>
         <br>
     </div>
     <br>
     <div class="feature-space row">
-        <img class = "feature-image" ng-src="{{featuredTopic.icon_2}}" alt="Feature Image" style = "width: 550px; height: 400px">
+        <img class = "feature-image" ng-src="{{featuredTopic.icon_2}}" alt="Feature Image" style = "width: 350px; height: 200px">
         <h4 style="text-align:left;">{{featuredTopic.featured}}</h4>
         <p class = "feature-text">{{featuredTopic.description}}
             <br>
             <br>
-            <a href="{{featuredTopic.link}}" class="btn btn-pink" role="button">Go there now!</a>
+            <a href="{{featuredTopic.link}}" class="btn btn-pink" role="button">Go there now</a>
         </p>
     </div>
 </section>
@@ -73,14 +73,45 @@
         <div class="topic-resources" ng-repeat="resource in resources| filter: gradeFilter | filter: mediaFilter | filter: searchFilter">
             <div class="resource">
                 <div class="inline">
-                    <h3> <a ng-href="{{resource.sourcelink}}" target="_blank">{{resource.title}}</a></h3> 
-                    <span>{{resource.grade}}</span>
+                    <h5 class="title">{{resource.title}}</h5>
+
+               
                 </div>
+                
                 <hr style ="border-top: 2px solid rgba(255,255,255,.6)">
-                <p> {{resource.description}}</p>
+                <p> {{resource.description}}<br><br>
+                     <a ng-href="{{resource.sourcelink}}"  class="btn btn-pink" role="button">Go there now</a>
+                  <span style="margin-left:10px" class="rw-ui-container"></span></p>
             </div>
+          
         </div>
         
         
     </div>
+    
+    <script type="text/javascript">(function(d, t, e, m){
+    
+    // Async Rating-Widget initialization.
+    window.RW_Async_Init = function(){
+                
+        RW.init({
+            huid: "304040",
+            uid: "513121650b6486a7b1a27ff6971e2f69",
+            options: { "style": "oxygen" } 
+        });
+        RW.render();
+    };
+        // Append Rating-Widget JavaScript library.
+    var rw, s = d.getElementsByTagName(e)[0], id = "rw-js",
+        l = d.location, ck = "Y" + t.getFullYear() + 
+        "M" + t.getMonth() + "D" + t.getDate(), p = l.protocol,
+        f = ((l.search.indexOf("DBG=") > -1) ? "" : ".min"),
+        a = ("https:" == p ? "secure." + m + "js/" : "js." + m);
+    if (d.getElementById(id)) return;              
+    rw = d.createElement(e);
+    rw.id = id; rw.async = true; rw.type = "text/javascript";
+    rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
+    s.parentNode.insertBefore(rw, s);
+    }(document, new Date(), "script", "rating-widget.com/"));</script>
 </section>
+
