@@ -319,9 +319,16 @@ a:focus {
 .navbar-custom {
     text-align: center;
     margin: auto;
-    border-bottom: 3px solid rgba(255,255,255,.3);
+    background: url("../img/navbar.png") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+
+   
+
+   /* border-bottom: 3px solid rgba(255,255,255,.3);*/
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+
     
     
 }
@@ -329,6 +336,7 @@ a:focus {
 .navbar-custom .navbar-brand {
     font-weight: 700;
     padding: 0;
+    background-image: url("img/navbar.png");
 }
 
 .navbar-custom .navbar-brand:focus {
@@ -339,17 +347,20 @@ a:focus {
     padding: 0px 6px;
     font-size: 16px;
     color: #fff;
+    background-image: url("img/navbar.png");
 }
 
 .navbar-custom .navbar-brand .navbar-toggle:focus,
 .navbar-custom .navbar-brand .navbar-toggle:active {
     outline: 0;
+    background-image: url("img/navbar.png");
 }
 
 .navbar-header {
 
     padding-left: 20px !important;
-    margin-left: 20px !important;    
+    margin-left: 20px !important; 
+    background-image: url("img/navbar.png");   
 }
 
 .navbar-subjects {
@@ -398,11 +409,12 @@ a:focus {
 }
 
 .navbar-center {
-    width: 550px;
+/*    width: 550px;*/
     margin:auto;
     text-align: center;
     display: inline-block;
     list-style-type: none;
+    background-image: url("img/navbar.png");
 }
 
 .about
@@ -452,11 +464,13 @@ a:focus {
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
+        background-image: url("img/navbar.png");
     }
 
     .navbar-custom.top-nav-collapse {
         padding: 0;
-        border-bottom: 3px solid rgba(255,255,255,.3);
+        background-image: url("img/navbar.png");
+     /*   border-bottom: 3px solid rgba(255,255,255,.3);*/
     }
 }
 
@@ -504,7 +518,7 @@ padding-top:300px;
     display: table;
     width: 100%;
     height: auto;
-    padding: 110px 90px 20px 90px!important;
+    padding: 100px 90px 20px 90px!important;
     text-align: center;
     color: #000;
     background-color: ;
@@ -691,6 +705,7 @@ margin-top: 0px !important;
     padding-top: 0px !important;
     width: 70px;
     height:40px;
+
     border-style: none;
     
 }
@@ -776,8 +791,9 @@ div[ng-view]{
 }
 
 .video {
-margin-top: 90px;
-margin-left: 38px;
+margin-top: 131px;
+margin-left: 12px;
+margin-right: 39px;
 
 }
 
@@ -789,12 +805,14 @@ z-index: -1;
 position: absolute;
 float: left; 
 margin-left:0px; 
-border: 0; 
-width: 500px; 
-height: 420px; 
+border: 0;
+top:49px;
+width: 450px; 
+height: 373px; 
 border-width:5px; 
-margin-bottom: 110px; 
-margin-right: 100px; 
+right:55px;
+margin-bottom: 105px; 
+
  
 
  

@@ -4,6 +4,8 @@
     app.controller("topicsCtrl", ["$scope", "$routeParams", '$http', function($scope, $routeParams, $http) {
         var topicsSheetUrl = 'https://spreadsheets.google.com/feeds/list/1mjePr-P66WAHm0LINEuquvSPhOtfkCf6vWaqLJK09VI/default/public/values?alt=json';
         var resourceSheetUrl = 'https://spreadsheets.google.com/feeds/list/1VRch1vAe9vrZytWTcm_JboMLdXx26os10nLBEjKrUUE/default/public/values?alt=json';
+        
+        $scope.starRating = 3;
         $scope.mediaFilter = '';
         $scope.gradeFilter = '';
         $scope.searchFilter = '';
