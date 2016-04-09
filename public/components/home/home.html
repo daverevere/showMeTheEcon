@@ -71,18 +71,19 @@
 
         <div style ="width: 83%; margin: auto" class="row special">
             <div class="col-lg-4 col-md-4 col-sm-4">
-                <img src="http://economics.utah.edu/1economics_1.jpg" alt="TV" style = "width: 260px; height: 150px"><p style = "font-size: 20px;">Copa Di Vino</p>
+                <a href="http://econshark.com" target="_blank"><img src="http://economics.utah.edu/1economics_1.jpg" alt="TV" style = "width: 260px; height: 150px"></a><p style = "font-size: 20px;">Copa Di Vino</p>
             </div>
            <!--  <div class="col-lg-4 col-md-4 col-sm-4" style="border-right: rgba(255,255,255,.6) solid; height:120px;"> -->
            <div class="col-lg-4 col-md-4 col-sm-4">
-                <img src="img/intro-bg.jpg" alt="TV" style = "width: 260px; height: 150px"><p style = "font-size: 20px; margin-bottom: 10px;">Khan Academy</p>
+
+                <a href="http://dirkmateer.com" target="_blank"><img src="img/intro-bg.jpg" alt="TV" style = "width: 260px; height: 150px"></a><p style = "font-size: 20px; margin-bottom: 10px;">Khan Academy</p>
                 <a scrollTo="#macro-section" class="arrow page-scroll">
             <img class ="arrow" src="img/arrow.png">
             
         </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
-                <img src= "https://www.washcoll.edu/live/image/gid/64/width/650/11491_econ_dollarbill.jpg" alt="TV" style = "width: 260px; height: 150px;"><p style = "font-size: 20px;">Slawsa on Shark Tank</p>
+                <a href="http://econshark.com" target="_blank"><img src= "https://www.washcoll.edu/live/image/gid/64/width/650/11491_econ_dollarbill.jpg" alt="TV" style = "width: 260px; height: 150px;"></a><p style = "font-size: 20px;">Slawsa on Shark Tank</p>
             </div>
 
             
@@ -109,14 +110,23 @@
                 <h2><a ng-show="hover" href="#topics">Money and Banking</a></h2> -->
           <!--   </div>
             <div class="col-lg-4 col-md-4 col-sm-4"> -->
-                <ul class="macro-page">
-                                <li ng-repeat="topic in macro"><a ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
-                            </ul>
-                          <span class="reveal">
-                <i class="reveal globe fa fa-globe"></i>
-                    </span>
-             
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-lg-offset-2 col-md-offset-2 col-sm-offset-2" style="margin-left:20%">
+                
+                <i ng-mouseenter="hover=true" class="globe fa fa-globe"></i>
+
             </div>
+            
+                        <div class="col-lg-5 col-md-5 col-sm-5"> 
+            <br>
+            <br> 
+            <br>      
+                <ul ng-class="{'reveal': hover}" ng-mouseleave="hover=false" class="macro-page">
+                    <li ng-repeat="topic in macro"><a ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
+                </ul>
+            </div>    
+
+
             
             
 <!--             <div class="col-lg-4 col-md-4 col-sm-4">
@@ -128,7 +138,7 @@
                 <h2><a ng-show="hover" href="#topics">Fiscal and Monetary Policy</a></h2>
                 <h2><a ng-show="hover" href="#topics">International Economics</a></h2>
             </div> -->
-        
+        </div>
         <br>
         <a scrollTo="#micro" class="page-scroll">
             <img class ="arrow" src="img/arrow.png">
@@ -142,20 +152,23 @@
         
         <h1 class="macro-title">Microeconomics</h1>
         <div class="row">
-                <ul class="micro-page">
-                                <li ng-repeat="topic in micro"><a ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
-                            </ul>
-                          <span class="reveal">
-                <i class="reveal globe fa fa-university"></i>
-                    </span>
-             
+            <div class="col-lg-5 col-md-5 col-sm-5"> 
+            <br>
+            <br>       
+                <ul ng-class="{'reveal': hover}" ng-mouseleave="hover=false" class="micro-page">
+                    <li ng-repeat="topic in micro"><a ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
+                </ul>
             </div>
+            <div class="col-lg-5 col-md-5 col-sm-5 ">
+                
+                <i ng-mouseenter="hover=true" class="globe fa fa-university"></i>
+                
+            </div>
+             
+        </div>
     
         
 
     </section>
-    
-    <hr style ="border-top: 2px solid rgba(255,255,255,.6); margin:20px">
-    
 </div>
 <script src="js/app.js"></script>

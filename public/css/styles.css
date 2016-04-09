@@ -19,6 +19,8 @@ html {
     cursor:pointer;
 }
 
+
+
 .btn-pink {
     color: #ffffff;
     background-color: rgb(240, 24, 132);
@@ -57,9 +59,11 @@ h5 {
     color:black !important;
     display: inline-block;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin:auto;
+    text-align: center;
 
     font-weight: 700;
-    font-size: 28px;
+    font-size: 12px;
     
  
 }
@@ -67,10 +71,23 @@ h5 {
 .title {
     color:black !important;
     display: inline-block;
+    margin:auto;
+    text-align: center;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 
     font-weight: 700;
-    font-size: 28px; 
+    font-size: 21px; 
+    
+}
+
+.feature-topic {
+
+    
+   
+    width: 90% !important;
+    margin:auto;
+    height: auto;
+    padding-top: 120px ;
     
 }
 
@@ -78,8 +95,9 @@ h5 {
  text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+    margin-top:0px;
     letter-spacing: 1px;
-    font-size: 60px;
+    font-size: 36px;
     color: white;
     display: inline-block;
     z-index: 0;
@@ -93,6 +111,11 @@ h5 {
     padding-top: 50px;
 }
 
+.tabs-row {
+   /* width: 93%;
+*/    margin:auto;
+}
+
 .latest {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -103,6 +126,11 @@ h5 {
     display: inline-block;
     z-index: 0;
     margin-top:15px;
+
+}
+
+.description {
+
 
 }
 
@@ -143,16 +171,24 @@ h3 {
 
 h4 {
     margin: 0 0 25px;
-    font-size: 42px;
+    font-size: 28px;
     line-height: 1;
     font-weight: bold;
 }
 
 p {
     font-family:Futura,Helvetica,Arial,sans-serif;
-    margin: 0 0 25px;
+   /* margin: 0 0 25px;*/
     font-size: 16px;
     line-height: 1;
+}
+.resource-section{
+    width:84%;
+    margin-left:12%;
+}
+
+.resource-text {
+padding-left: 15px;
 }
 
 img { 
@@ -162,7 +198,7 @@ img {
 
 @media(min-width:768px) {
     p {
-        margin: 0 0 35px;
+      /*  margin: 0 0 35px;*/
         font-size: 20px;
         line-height: 1.4;
     }
@@ -210,24 +246,24 @@ span:hover {
 
 }
 
-/*.reveal:hover{
-  transition:all ease 0.5s !important;
-  color:white!important;
-}*/
+.reveal {
+  transition:all ease-in 0.5s;
+    opacity: 100 !important;
+    color:white;
+}
 
 .macro-page {
     
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
-    font-size: 32px;
-  line-height: 2;
+    font-size: 22px;
+    line-height:1.6;
     list-style: none;
-     z-index: 1;
+     z-index: 2;
     position: absolute;
     text-align:center;
-    margin-top:2%;
-    left: 30%;
-    padding: auto;
+   padding-top:0px;
+
     text-transform: uppercase;
     opacity: 0;
        text-shadow:
@@ -253,14 +289,14 @@ span:hover {
     
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
-    font-size: 32px;
-    line-height:1.4;
+    font-size: 22px;
+    line-height:1.6;
     list-style: none;
      z-index: 2;
     position: absolute;
     text-align:center;
    padding-top:0px;
-    left: 27%;
+    left: 30%;
     text-transform: uppercase;
     opacity: 0;
        text-shadow:
@@ -273,12 +309,12 @@ span:hover {
 
 }
 
-.micro-page:hover{
+/*.micro-page:hover{
     transition:all ease-in 0.5s;
     opacity: 100 !important;
     color:white;
 }
-
+*/
 a {
     color: white;
     cursor:pointer;
@@ -304,6 +340,7 @@ a:focus {
  font-size:440px !important;
  color: rgb(240, 24, 132) !important;
  padding-top: 0px !important;
+ cursor: pointer;
 
 };
 
@@ -366,7 +403,7 @@ a:focus {
 .navbar-subjects {
     margin-top:40px;
   font-size: 28px;
-    
+   
     font-weight: bolder !important;
     margin-left:20px;
 }
@@ -392,9 +429,7 @@ a:focus {
     outline: 0;
     background-color: transparent;
 }
-.ng-scope{
 
-}
 
 .navbar-custom .nav li.active {
     outline: 0;
@@ -453,6 +488,10 @@ a:focus {
 
 .dropdown:hover .dropdown-menu {
     display: block;
+
+}
+.dropdown:hover .topics {
+    left: 22%;
 }
 
 @media(min-width:768px) {
@@ -618,6 +657,8 @@ padding-top:300px;
 
 .content-section {
     padding-top: 0px;
+        width: 100%;
+    margin:auto;
 }
 
 #map {
@@ -766,12 +807,14 @@ div[ng-view]{
 }
 
 .topic-resources{
+    width:90%;
     color:#181818;
 }
 
 .resource{
-    margin: 20px 0px;
-    padding: 10px;
+    margin: 20px auto;
+    padding: 10px 0px;
+  /*  width:90%;*/
     background: rgba(255,255,255,.3);
 }
 
@@ -781,9 +824,9 @@ div[ng-view]{
 
 .feature-image {
    float: left;
-   margin-right:15px;
-   top: 0;
-   left: 0;
+   margin-right:20px;
+   margin-bottom:25px;
+ 
    width: 100%;
    background: url(../img/tv4.png) !important;
    background-image: url("img/tv4.png") !important;
@@ -832,34 +875,31 @@ margin-bottom: 105px;
 
 .feature-text {
   text-align: left;
+  margin-right: 5%;
 };
 
 .feature-space {
-    width: 500px;
+    width: 90%;
     margin:auto;
   padding-bottom: 0px;
 
 };
 
-.feature-topic {
-        display: table;
-    width: 91%;
-    height: auto;
-    padding: 110px 90px 20px 90px!important;
-    text-align: center;
-    color: #000;
-    background-color: ;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
+
+
 
 .inline{
     display: inline;
+    text-align: center;
+    margin:auto;
 }
 .inline h4 {
     display: inline;
+}
+
+.feature-row {
+    padding-top:5%;
+
 }
 
 .feature-video {

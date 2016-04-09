@@ -15,30 +15,8 @@
         <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="PATH/TO/rating.min.css">
         
-        <script type="text/javascript">(function(d, t, e, m){
-    
-    // Async Rating-Widget initialization.
-    window.RW_Async_Init = function(){
-                
-        RW.init({
-            huid: "304040",
-            uid: "513121650b6486a7b1a27ff6971e2f69",
-            options: { "style": "oxygen" } 
-        });
-        RW.render();
-    };
-        // Append Rating-Widget JavaScript library.
-    var rw, s = d.getElementsByTagName(e)[0], id = "rw-js",
-        l = d.location, ck = "Y" + t.getFullYear() + 
-        "M" + t.getMonth() + "D" + t.getDate(), p = l.protocol,
-        f = ((l.search.indexOf("DBG=") > -1) ? "" : ".min"),
-        a = ("https:" == p ? "secure." + m + "js/" : "js." + m);
-    if (d.getElementById(id)) return;              
-    rw = d.createElement(e);
-    rw.id = id; rw.async = true; rw.type = "text/javascript";
-    rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
-    s.parentNode.insertBefore(rw, s);
-    }(document, new Date(), "script", "rating-widget.com/"));</script>
+ 
+
         
         <script src="vendor/jquery/dist/jquery.js"></script>    
         <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -60,7 +38,7 @@
                 <i class="fa fa-bars" ></i>
                 </button>
                 <a href="#/">
-                    <img src="img/shutterstock5.png" alt="TV" style ="border: 0; width: 150px; height: 150px; border-width:5px">
+                    <img class="animated bounceIn" src="img/logo1.png" alt="TV" style ="border: 0; width: 150px; height: 150px; border-width:5px ;margin-top:3px">
                 </a>
             </div>
             <div class="container">
@@ -76,7 +54,7 @@
                                 <!--  ng-href sees #topics and knows to go to the topics view with the name of the link it finds in the macro collection in the homeCtrl. It will then display the title property found in that collection. Then, once it goes to the topics view, control is passed to topicCtrl. -->
                             </ul>
                         </li>
-                        <li class="dropdown">
+                        <li class=" menu dropdown">
                             <a class="btn btn-default dropdown-toggle topics-menu navbar-subjects" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"  scrollTo="#micro" class="page-scroll" >
                                 Micro
                             </a>
@@ -100,6 +78,8 @@
         <!-- Footer -->
         <footer>
             <div class="container text-center">
+                <br>
+                <br>
                 <p>Copyright &copy; Show Me the Econ 2016</p>
             </div>
         </footer>        
