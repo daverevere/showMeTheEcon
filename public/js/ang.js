@@ -12,5 +12,9 @@ app.config(function($routeProvider) {
         templateUrl: 'components/topics/topics.html',//how do we make it point to the different views for each topic?
         controller : "topicsCtrl"
     })
+    .when('/about', {
+        templateUrl: 'components/about/about.php'
+
+    })
     .otherwise("/");
 });
