@@ -24,13 +24,13 @@ if($_POST["message"]) {
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-sm-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
 
-		<form action="contact.php" enctype="text/plain" method="post">
+		<form method="post" action="contact.php" enctype="text/plain">
 <!-- 		<p>Name: <input type="text" id="Name" size="20"></p>
 		<p>E-mail address: <input type="text" id="E-mail" size="20"></p> -->
-		<p>Message:</p>
-		<p><textarea name="Message" cols="55" rows="5"
-		></textarea></p>
-		<p><input class="btn btn-pink" type="submit" value="Submit"></p>
+		
+		<textarea name="message" cols="55" rows="5"
+		></textarea>
+		<input class="btn btn-pink" type="submit" value="Submit">
 </form>
 	</div>
 
