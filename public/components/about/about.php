@@ -1,6 +1,7 @@
 <div class="row">
 <br>
 <br>
+<?php echo "hello world"; ?>
 <br>
 <br>
 	<div class="col-lg-8 col-md-8 col-sm-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
