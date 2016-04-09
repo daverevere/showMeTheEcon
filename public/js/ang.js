@@ -13,7 +13,8 @@ app.config(function($routeProvider) {
         controller : "topicsCtrl"
     })
     .when('/about', {
-        templateUrl: 'components/about/about.php'
+        templateUrl: 'components/about/about.html'
+        // controller : "aboutCtrl"
 
     })
     .otherwise("/");
