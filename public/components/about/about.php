@@ -1,7 +1,7 @@
 <div class="row">
 <br>
 <br>
-<?php echo "hello world"; ?>
+
 <br>
 <br>
 	<div class="col-lg-8 col-md-8 col-sm-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
@@ -9,7 +9,7 @@
 		<h3>Charity-Joy Acchiardo</h3><p>is a Lecturer of Economics at the University of Arizona. She understands that many students perceive the study of economics as uninteresting and disconnected to the realities of their everyday lives. But she also knows that isn’t true. She gets her students actively engaged in observing their own worlds and solving the puzzles they find there.</p>
 		<p> 
 		 Acchiardo is a frequent speaker at teaching workshops across the US and Canada where she shares tips for making economics come alive for students. She has an MBA from Middlebury Institute of International Studies and a PhD from George Mason University where she was the Olofsson Weaver fellow in political economy.</p> 
-		
+		<?php echo "hello world"; ?>
 		<p>Ideas and resource contributions for this website are very much welcome! Use the secure form below to submit suggestions or comments, or to request more information about Acchiardo's other projects.</p>
 		
 
