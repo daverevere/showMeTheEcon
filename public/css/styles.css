@@ -74,11 +74,11 @@ h5 {
     color:black !important;
     display: inline-block;
     margin:auto;
-    text-align: center;
+    text-align: right;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 
     font-weight: 700;
-    font-size: 21px; 
+    font-size: 17px; 
     
 }
 
@@ -191,6 +191,7 @@ p {
 
 .resource-text {
 padding-left: 15px;
+font-size: 14px;
 }
 
 img { 

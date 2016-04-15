@@ -83,17 +83,18 @@
     </div>
 
 
-        <div class="topic-resources" ng-repeat="resource in resources| filter: gradeFilter | filter: mediaFilter | filter: searchFilter">
-            <div class="row resource">
+        <div class="topic-resources " ng-repeat="resource in resources| filter: gradeFilter | filter: mediaFilter | filter: searchFilter">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="row resource ">
                 <div class="col-lg-3 col-md-3 col-sm-3">
-                   <img ng-src="{{resource.image}}" alt="resource image" style = "width: 240px; height: 160px;">
+                   <a ng-href="{{resource.sourcelink}}" target="_blank"><img ng-src="{{resource.image}}" alt="resource image" style = "width: 190px; height: 120px;"></a>
                 </div>
 
-                <div class="col-lg-9 col-md-9 col-sm-9">
+                <div class="col-lg-8 col-md-8 col-sm-8">
                     <div class="row">
 
                         <h5 class="title">&nbsp;&nbsp;{{resource.title}}</h5> 
-                        <a ng-href="{{resource.sourcelink}}" target="_blank" class="btn btn-pink" role="button" style="margin-left: 20px">Show me the econ!</a>
+     <!--                    <a ng-href="{{resource.sourcelink}}" target="_blank" class="btn btn-pink" role="button" style="margin-left: 20px">Show me the econ!</a> -->
                         <hr style ="border-top: 2px solid rgba(255,255,255,.6); margin:10px">
 
                     </div>
@@ -110,6 +111,7 @@
 
                
          
+        </div>
         </div>
 
 <!-- <div class="row">
