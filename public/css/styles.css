@@ -21,8 +21,6 @@ html {
     cursor:pointer;
 }
 
-
-
 .btn-pink {
     color: #ffffff;
     background-color: rgb(240, 24, 132);
@@ -188,10 +186,35 @@ p {
     width:84%;
     margin-left:12%;
 }
+.resource-item-wrap{
+    /*background-color: gray;*/
+    background: rgba(255,255,255,.2);
+    
+}
+.resource-item{
+    overflow-y: hidden;
+    /*color:red;*/
+    /*border: solid #000 2px;*/
+    padding: 20px;
+    /*max-height: 550px;*/
+    /*overflow-y: auto;*/
+    height: 200px;
+}
+.resource-item img{
+    width: 190px;
+    height: 120px;
+    float: left;
+}
 
-.resource-text {
-padding-left: 15px;
-font-size: 14px;
+.resource-item .resource-text {
+    margin-left: 210px;
+    clear: right;
+    font-size: 14px;
+}
+.resource-item .item-title{
+    font-size: 22px;
+    max-height: 27px;
+    text-overflow: hidden;
 }
 
 img { 
@@ -224,7 +247,7 @@ img {
  color: rgb(240, 24, 132);
  padding-top: 0px;
  text-align:left;
-};
+}
 
 .fa.fa-globe { 
  
@@ -233,7 +256,7 @@ img {
  padding-top: 0px;
  text-align:left;
 
-};
+}
 
 .fa.fa-globe:hover{
 
@@ -345,7 +368,7 @@ a:focus {
  padding-top: 0px !important;
  cursor: pointer;
 
-};
+}
 
 
 
@@ -360,8 +383,9 @@ a:focus {
     text-align: center;
     margin: auto;
     background: url("../img/navbar.png") !important;
-    background-size: contain !important;
+    background-size: cover !important;
     background-repeat: no-repeat !important;
+    boder-bottom: solid 1px red;
 
    
 
@@ -525,7 +549,7 @@ a:focus {
     padding: 300 !important;
     text-align: center;
     color: #000;
-    background-color: ;
+    /*background-color: ;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -563,7 +587,7 @@ padding-top:300px;
     padding: 100px 90px 20px 90px!important;
     text-align: center;
     color: #000;
-    background-color: ;
+    /*background-color: ;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -718,7 +742,7 @@ background:rgb(240, 24, 132) !important;
 .btn-default:focus {
     border: 1px solid #42dca3;
     outline: 0;
-    color: ;
+    /*color: ;*/
     background-color: rgb(240, 24, 132);
 }
 
@@ -879,14 +903,14 @@ margin-bottom: 105px;
 .feature-text {
   text-align: left;
   margin-right: 5%;
-};
+}
 
 .feature-space {
     width: 90%;
     margin:auto;
   padding-bottom: 0px;
 
-};
+}
 
 
 
