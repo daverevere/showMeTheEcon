@@ -1,19 +1,10 @@
 body {
-    width: 100%;
-    height: 100%;
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: black;
     background: url(../img/shutterfly4.jpg);
     background-size: cover;
     background-attachment: fixed;
     overflow-x: hidden;
 }
-
-html {
-    width: 100%;
-    height: 100%;
-}
-
 h5 {
     color: black !important;
     display: inline-block;
@@ -24,7 +15,6 @@ h5 {
     font-size: 12px;
 }
 
-h2 {}
 
 h6 {
     margin: 0 0 35px;
@@ -64,7 +54,6 @@ h1 {
 
 p {
     font-family: Futura, Helvetica, Arial, sans-serif;
-    /* margin: 0 0 25px;*/
     font-size: 16px;
     line-height: 1;
 }
@@ -99,12 +88,6 @@ img::selection {
 img::-moz-selection {
     background: 0 0;
 }
-
-body {
-    // This is incorrect
-    // webkit-tap-highlight-color: rgba(255, 255, 255, .2);
-}
-
 
 #the-iframe {
     cursor: pointer;
@@ -145,36 +128,7 @@ body {
     font-size: 17px;
 }
 
-.feature-topic {
-    width: 90% !important;
-    margin: auto;
-    height: auto;
-    padding-top: 70px;
-}
-
-.feature-title {
-    text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    margin-top: 0px;
-    letter-spacing: 1px;
-    font-size: 36px;
-    color: white;
-    display: inline-block;
-    z-index: 0;
-    margin-bottom: 5px;
-}
-
-.feature-col {
-    text-align: right;
-    padding-right: 0px !important;
-    padding-left: 150px;
-    padding-top: 50px;
-}
-
 .tabs-row {
-    /* width: 93%;
-*/
     margin: auto;
 }
 
@@ -189,47 +143,6 @@ body {
     z-index: 0;
     margin-top: 15px;
 }
-
-.description {}
-
-.resource-section {
-    width: 84%;
-    margin-left: 12%;
-}
-
-.resource-item-wrap {
-    /*background-color: gray;*/
-    background: rgba(255, 255, 255, .2);
-}
-
-.resource-item {
-    overflow-y: hidden;
-    /*color:red;*/
-    /*border: solid #000 2px;*/
-    padding: 20px;
-    /*max-height: 550px;*/
-    /*overflow-y: auto;*/
-    height: 200px;
-}
-
-.resource-item img {
-    width: 190px;
-    height: 120px;
-    float: left;
-}
-
-.resource-item .resource-text {
-    margin-left: 210px;
-    clear: right;
-    font-size: 14px;
-}
-
-.resource-item .item-title {
-    font-size: 22px;
-    max-height: 27px;
-    text-overflow: hidden;
-}
-
 
 .fa.fa-angle-down {
     font-size: 120px;
@@ -399,19 +312,6 @@ body {
     padding-top: 300px;
 }
 
-.featured {
-    display: table;
-    width: 100%;
-    height: auto;
-    padding: 100px 90px 20px 90px!important;
-    text-align: center;
-    color: #000;
-    /*background-color: ;*/
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
 
 .content-section {
     padding-top: 0px;
@@ -445,23 +345,20 @@ ul.banner-social-buttons {
     margin-bottom: 0;
 }
 
-::-moz-selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255, 255, 255, .2);
-}
+// ::-moz-selection {
+//     text-shadow: none;
+//     background: #fcfcfc;
+//     background: rgba(255, 255, 255, .2);
+// }
 
-::selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255, 255, 255, .2);
-}
+// ::selection {
+//     text-shadow: none;
+//     background: #fcfcfc;
+//     background: rgba(255, 255, 255, .2);
+// }
 
 
-.home section {
-    height: 100vh;
-    padding: 150px 0;
-}
+
 
 div[ng-view] {
     margin-top: 90px;
@@ -487,14 +384,7 @@ div[ng-view] {
     border-bottom: 0;
 }
 
-.feature-image {
-    float: left;
-    margin-right: 20px;
-    margin-bottom: 25px;
-    width: 100%;
-    background: url(../img/tv4.png) !important;
-    background-image: url("img/tv4.png") !important;
-}
+
 
 .video {
     margin-top: 131px;
@@ -516,16 +406,6 @@ div[ng-view] {
     margin-bottom: 105px;
 }
 
-.feature-text {
-    text-align: left;
-    margin-right: 5%;
-}
-
-.feature-space {
-    width: 90%;
-    margin: auto;
-    padding-bottom: 0px;
-}
 
 .inline {
     display: inline;
@@ -537,15 +417,36 @@ div[ng-view] {
     display: inline;
 }
 
-.feature-row {
-    padding-top: 5%;
+#latest{
+    .featured {
+        display: table;
+        width: 100%;
+        height: auto;
+        padding: 100px 90px 20px 90px!important;
+        text-align: center;
+        color: #000;
+        /*background-color: ;*/
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+    .feature-col {
+        text-align: right;
+        padding-right: 0px !important;
+        padding-left: 150px;
+        padding-top: 50px;
+    }
 }
-
-.feature-video {
-    background-image: url('../img/tv3.png') !important;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 0;
-    width: 450px;
-    height: 450px;
+.home section {
+    height: 100vh;
+    padding: 150px 0px;
 }
+// centerXcenterY IS  A REPLACEMENT FOR THE 'INTRO' IN THE HOME PAGE
+// .centerXcenterY {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+//   text-align: center;
+// }

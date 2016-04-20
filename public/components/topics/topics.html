@@ -22,6 +22,7 @@
         </div>
     </div>
 </section>
+
 <section class="container resource-section">
     <div class="row tabs-row">
         <div>
@@ -83,19 +84,14 @@
     <div class="row resource-item-wrap">
         <div class="topic-resources " ng-repeat="resource in resources| filter: gradeFilter | filter: mediaFilter | filter: searchFilter">
             <div class="resource-item col-lg-6 col-md-12 col-sm-12">
-                <!--<div class="col-lg-3 col-md-3 col-sm-3">-->
-                <!--</div>-->
                         <div class="item-title">&nbsp;&nbsp;{{resource.title}}</div>
                         <hr style="border-top: 2px solid rgba(255,255,255,.6); margin:10px">
-                <!--<div class="col-lg-8 col-md-8 col-sm-8">-->
                     <div >
-                    <a ng-href="{{resource.sourcelink}}" target="_blank"><img ng-src="{{resource.image}}" alt="resource image" style="width: 190px; height: 120px;"></a>
-
+                        <a ng-href="{{resource.sourcelink}}" target="_blank"><img ng-src="{{resource.image}}" alt="resource image" style="width: 190px; height: 120px;"></a>
                     </div>
                     <div >
                         <p class="resource-text">{{resource.description}}</p>
                     </div>
-                <!--</div>-->
             </div>
         </div>
     </div>
