@@ -2,6 +2,17 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const nodemon = require('gulp-nodemon');
+const less = require('gulp-less');
+const plumber = require('gulp-plumber');
+const autoprefixer = require('gulp-autoprefixer');
+const concat = require('gulp-concat');
+const gulpif = require('gulp-if');
+const gutil = require('gulp-util');
+const cssmin = require('gulp-cssmin');
+
+
+const production = process.env.NODE_ENV === 'production';
+
 
 gulp.task('browser-sync', ['nodemon'], () => {
   browserSync.init(null, {
@@ -31,5 +42,23 @@ gulp.task('nodemon', (cb) => {
   });
 }); 
 
-gulp.task('default', [ 'browser-sync']);
+gulp.task('less', function() {
+  return gulp.src('public/css/less/main.less')
+    .pipe(plumber())
+    .pipe(less().on('error', function(err){
+        gutil.log(err);
+        this.emit('end');
+    }))
+    .pipe(autoprefixer())
+    .pipe(concat('styles.css'))
+    // .on('error',console.error.bind(console))
+    .pipe(gulpif(production, cssmin()))
+    .pipe(gulp.dest('public/css'));
+});
+
+gulp.task('watch', function() {
+  gulp.watch('public/css/less/**/*.less', ['less']);
+});
+
+gulp.task('default', [ 'browser-sync','watch','less']);
 

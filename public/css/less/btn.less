@@ -1,0 +1,77 @@
+
+.btn-circle {
+    width: 70px;
+    height: 70px;
+    margin-top: 15px;
+    padding: 7px 16px;
+    border: 2px solid #fff;
+    border-radius: 100%!important;
+    font-size: 40px;
+    color: #fff;
+    background: 0 0;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+    &&:hover, &&:focus {
+        outline: 0;
+        color: #fff;
+        background: rgba(255,255,255,.1);
+    }
+    i.animated {
+        -webkit-transition-property: -webkit-transform;
+        -webkit-transition-duration: 1s;
+        -moz-transition-property: -moz-transform;
+        -moz-transition-duration: 1s;
+    }
+    &&:hover i.animated {
+        -webkit-animation-name: pulse;
+        -moz-animation-name: pulse;
+        -webkit-animation-duration: 1.5s;
+        -moz-animation-duration: 1.5s;
+        -webkit-animation-iteration-count: infinite;
+        -moz-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        -moz-animation-timing-function: linear;
+    }
+}
+
+.btn-default {
+    border: 3px solid #42dca3;
+    color: #42dca3;
+    background-color: transparent;
+    &&:hover, &&:focus {
+        border: 1px solid #42dca3;
+        outline: 0;
+        background-color: rgb(240, 24, 132);
+    }
+}
+
+.btn-intro {
+    border:2px solid rgb(240, 24, 132);
+    color: rgb(240, 24, 132);
+    background: rgba(255,255,255,.6) !important;
+    text-transform: uppercase;
+    border-radius: 3px;
+    &&:hover, &&:focus {
+        background:rgb(240, 24, 132) !important;
+    }
+
+}
+.btn {
+    border-radius: 0;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.btn-pink {
+    color: #ffffff;
+    background-color: rgb(240, 24, 132);
+    border-color: #130269;
+    border-radius: 5px !important;
+    text-align: left !important;
+    align:left !important;
+}

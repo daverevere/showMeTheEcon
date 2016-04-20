@@ -16,9 +16,6 @@
         <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="PATH/TO/rating.min.css">
         
- 
-
-        
         <script src="vendor/jquery/dist/jquery.js"></script>    
         <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="vendor/jquery.easing/js/jquery.easing.min.js"></script>
@@ -32,7 +29,6 @@
         <![endif]-->
     </head>
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="indexCtrl">
-        <!-- Navigation -->
         <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -50,7 +46,7 @@
                                 Macro
                             </a>
                             <ul class="dropdown-menu topics" aria-labelledby="dropdownMenu1">
-                                <li ng-repeat="topic in macro "><a ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
+                                <li ng-repeat="topic in macro "><a data-ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
                                 <!-- //why is the filterResources function here? -->
                                 <!--  ng-href sees #topics and knows to go to the topics view with the name of the link it finds in the macro collection in the homeCtrl. It will then display the title property found in that collection. Then, once it goes to the topics view, control is passed to topicCtrl. -->
                             </ul>
@@ -60,7 +56,7 @@
                                 Micro
                             </a>
                             <ul class="dropdown-menu topics" aria-labelledby="dropdownMenu1">
-                                <li ng-repeat="topic in micro "><a ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
+                                <li ng-repeat="topic in micro "><a data-ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
                             </ul>
                         </li>
                         <li>
@@ -69,14 +65,10 @@
                             </a>       
                         </li>
                     </ul>
-                  
-                    <!-- /.navbar-collapse -->
                 </div>
             </div>
-            <!-- /.container -->
         </nav>
         <div ng-view autoscroll="true"></div>
-        <!-- Footer -->
         <footer>
             <div class="container text-center">
                 <br>
