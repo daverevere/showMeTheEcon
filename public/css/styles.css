@@ -1,3 +1,44 @@
+.jumbotron {
+  text-align: center;
+  background: none;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.container.jumbo {
+  position: relative;
+  height: 100vh;
+}
+.container.jumbo .featured {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-55%);
+          transform: translateY(-55%);
+  text-align: center;
+}
+.container.jumbo .featured a.arrow {
+  width: 75px;
+  margin: auto;
+  position: relative;
+}
+.container.jumbo .featured-col {
+  margin-top: 25px;
+}
+.container.jumbo .featured-col img {
+  width: 100%;
+  height: 275px;
+}
+.container.jumbo h1 {
+  padding-left: 5%;
+}
+.container.jumbo .featured-video img {
+  width: 420px;
+  height: 400px;
+  margin-top: -25px;
+  margin-left: 50px;
+  border: none;
+}
 body {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: url(../img/shutterfly4.jpg);
@@ -198,9 +239,6 @@ img::-moz-selection {
   opacity: 0;
   text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
-.light {
-  font-weight: 400;
-}
 .globe {
   font-size: 440px !important;
   color: #f01884 !important;
@@ -367,10 +405,8 @@ div[ng-view] {
 .navbar-custom {
   text-align: center;
   margin: auto;
-  background: url("../img/navbar.png") !important;
-  background-size: cover !important;
   background-repeat: no-repeat !important;
-  border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+  background-color: red;
   text-transform: uppercase;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
