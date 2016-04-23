@@ -1,30 +1,16 @@
-<!--<div class="centerXcenterY">
-    <div>
-        <div class="title animated fadeIn">This site is currently under construction </div>
-        <br>
-        <button type="button" class="btn btn-intro">
-            Watch the Latest Episode
-        </button>
-    </div>
-</div>-->
-
-<div class="container jumbo">
-    <div class="row">
-        <div class="jumbotron">
-            <h1 class="small">This site is currently under construction</h1>
-            <p>
-                <a class="page-scroll" scrollTo="#featured">
-                    <button type="button" class="btn btn-intro">
-                        Watch the Latest Episode
-                    </button>
-                </a>
-            </p>
-        </div>
+<div class="container full intro" id="intro">
+    <div class="center-vertically text-center">
+            <h1>This site is currently under construction</h1>
+            <a class="page-scroll" scrollto="#featured">
+                <button type="button" class="btn btn-intro">
+                    Watch the Latest Episode
+                </button>
+            </a>
     </div>
 </div>
 
-<div class="container jumbo" id="featured">
-    <div class="featured">
+<div class="container full" id="featured">
+    <div class="featured text-center">
         <div class="row">
             <div class=" col-lg-6 col-md-6 col-sm-6">
                 <h1>Featured<br>Picks</h1>
@@ -35,9 +21,7 @@
                     allowfullscreen></iframe>-->
             </div>
         </div>
-        <div class="row featured-col">
-            <!--<div style="margin: 36px auto 10px auto">-->
-            <!--<div style="display: inline-block; border-top: 3px solid rgba(255,255,255,.6); margin:65px 0px 0px 0px; width: 76%;"></div>-->
+        <div class="row items">
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <a href="http://econshark.com" target="_blank"><img src="http://economics.utah.edu/1economics_1.jpg" alt="TV"></a>
                 <p style="font-size: 20px;">Copa Di Vino</p>
@@ -51,15 +35,49 @@
                 <p style="font-size: 20px;">Slawsa on Shark Tank</p>
             </div>
         </div>
-        <a scrollTo="#macro-section" class="arrow page-scroll">
+        <a scrollto="#macro" class="arrow page-scroll">
             <img class="arrow" src="img/arrow.png">
         </a>
     </div>
 </div>
 
+<div class="container full" id="macro">
+    <div class="macro center-vertically text-center">
+        <h1>Macroeconomics</h1>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 flex500">
+                <i class="fa fa-globe"></i>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 list">
+                <ul class="links">
+                    <li ng-repeat="topic in macro"><a ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <a scrollto="#micro" class="page-scroll">
+            <img class="arrow" src="img/arrow.png">
+        </a>
+    </div>
+</div>
+
+<div class="container full" id="micro">
+    <div class="micro text-center center-vertically ">
+        <h1 >Microeconomics</h1>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 list">
+                <ul  class="links">
+                    <li ng-repeat="topic in micro"><a ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 flex500  ">
+                <i ng-mouseenter="hover=true" class="globe fa fa-university "></i>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-<div class="home">
+<!--<div class="home">-->
     <!--<section class="intro">
         <div class="intro-body">
             <div class="container">
@@ -91,49 +109,29 @@
         </div>
     </section>-->
     <!-- Latest Resources Section -->
-    <section class="featured container content-section text-center">
+    <!--<section class="featured container content-section text-center">
 
 
-    </section>
-    <!-- Macro Section -->
-    <section id="macro-section" class="macro container content-section text-center">
+    </section>-->
+    <!--Macro Section -->
+    <!--<section  class="macro container content-section text-center">
         <h1 class="macro-title">Macroeconomics</h1>
         <div class="row">
-            <!--                 <h2><a ng-show="hover" href="#topics">Unemployment</a></h2>
-                
-                <h2><a ng-show="hover" href="#topics">Inflation</a></h2>
-                
-                <h2><a ng-show="hover" href="#topics">Money and Banking</a></h2> -->
-            <!--   </div>
-            <div class="col-lg-4 col-md-4 col-sm-4"> -->
             <div class="col-lg-3 col-md-3 col-sm-3 col-lg-offset-2 col-md-offset-2 col-sm-offset-2" style="margin-left:20%">
                 <i ng-mouseenter="hover=true" class="globe fa fa-globe"></i>
             </div>
             <div class="col-lg-5 col-md-5 col-sm-5">
-                <br>
-                <br>
-                <br>
                 <ul ng-class="{'reveal': hover}" ng-mouseleave="hover=false" class="macro-page">
                     <li ng-repeat="topic in macro"><a ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
                 </ul>
             </div>
-            <!--             <div class="col-lg-4 col-md-4 col-sm-4">
-                <br>
-                <br>
-                <br>
-                <br>
-                <h2><a ng-show="hover" href="#topics">Economic Growth</a></h2>
-                <h2><a ng-show="hover" href="#topics">Fiscal and Monetary Policy</a></h2>
-                <h2><a ng-show="hover" href="#topics">International Economics</a></h2>
-            </div> -->
         </div>
-        <br>
         <a scrollTo="#micro" class="page-scroll">
             <img class="arrow" src="img/arrow.png">
         </a>
-    </section>
+    </section>-->
     <!-- Micro Section -->
-    <section id="micro" class="macro container content-section text-center">
+    <!--<section id="micro" class="macro container content-section text-center">
         <h1 class="macro-title">Microeconomics</h1>
         <div class="row">
             <div class="col-lg-5 col-md-5 col-sm-5">
@@ -147,6 +145,6 @@
                 <i ng-mouseenter="hover=true" class="globe fa fa-university"></i>
             </div>
         </div>
-    </section>
-</div>
+    </section>-->
+<!--</div>-->
 <script src="js/app.js"></script>

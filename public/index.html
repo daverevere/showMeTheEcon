@@ -1,111 +1,145 @@
- 
 <!DOCTYPE html>
 <html lang="en" ng-app="econ">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title>Show me the econ</title>
-        <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/styles.css" rel="stylesheet">
-        <link href="css/animate.css" rel="stylesheet">
-        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="PATH/TO/rating.min.css">
-        
-        <script src="vendor/jquery/dist/jquery.js"></script>    
-        <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="vendor/jquery.easing/js/jquery.easing.min.js"></script>
-        <script src="vendor/angular/angular.min.js"></script>
-        <script src="vendor/angular-route/angular-route.min.js"></script>
-        <script src="vendor/angular-animate/angular-animate.min.js"></script>
-        <script src="PATH/TO/rating.min.js"></script>
-        <!--[if lt IE 9]>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Show me the econ</title>
+    <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="PATH/TO/rating.min.css">
+
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.easing/js/jquery.easing.min.js"></script>
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/angular-route/angular-route.min.js"></script>
+    <script src="vendor/angular-animate/angular-animate.min.js"></script>
+    <script src="PATH/TO/rating.min.js"></script>
+    <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-    </head>
-    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="indexCtrl">
-            <!--<nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Project name</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                <form class="navbar-form navbar-right">
-                    <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
-                    </div>
-                    <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
-                    </div>
-                    <button type="submit" class="btn btn-success">Sign in</button>
-                </form>
-                </div>
-            </div>
-            </nav>-->
+</head>
 
-        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-            <div class="navbar-header tv">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="indexCtrl">
+
+
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                <i class="fa fa-bars" ></i>
-                </button>
-                <a href="#/">
-                    <img class="animated bounceIn" src="img/logo1.png" alt="TV" style ="border: 0; width: 150px; height: 150px; border-width:5px ;margin-top:3px">
-                </a>
+                        <i class="fa fa-bars"></i>
+                    </button>
+                <!--<a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i> <span class="light">Start</span> Bootstrap
+                </a>-->
             </div>
-            <div class="container">
-                <div class="collapse navbar-collapse navbar-center navbar-main-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a class="btn btn-default dropdown-toggle topics-menu navbar-subjects" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="page-scroll" scrollTo="#macro">
+            <div class="collapse navbar-collapse navbar-left navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#/">
+                            <img class="animated bounceIn logo " src="img/logo1.png" alt="TV" style="border: 0;">
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="btn btn-default dropdown-toggle topics-menu navbar-subjects" type="button" id="dropdownMenu3" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true" class="page-scroll" scrollTo="#macro">
                                 Macro
                             </a>
-                            <ul class="dropdown-menu topics" aria-labelledby="dropdownMenu1">
-                                <li ng-repeat="topic in macro "><a data-ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
-                    
-                            </ul>
-                        </li>
-                        <li class=" menu dropdown">
-                            <a class="btn btn-default dropdown-toggle topics-menu navbar-subjects" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"  scrollTo="#micro" class="page-scroll" >
+                        <ul class="dropdown-menu topics" aria-labelledby="dropdownMenu1">
+                            <li ng-repeat="topic in macro "><a data-ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
+
+                        </ul>
+                    </li>
+                    <li class=" menu dropdown">
+                        <a class="btn btn-default dropdown-toggle topics-menu navbar-subjects" type="button" id="dropdownMenu3" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true" scrollTo="#micro" class="page-scroll">
                                 Micro
                             </a>
-                            <ul class="dropdown-menu topics" aria-labelledby="dropdownMenu1">
-                                <li ng-repeat="topic in micro "><a data-ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="navbar-subjects" href="#about" >
+                        <ul class="dropdown-menu topics" aria-labelledby="dropdownMenu1">
+                            <li ng-repeat="topic in micro "><a data-ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="navbar-subjects" href="#about">
                                 Meet Your Host
-                            </a>       
-                        </li>
-                    </ul>
-                </div>
+                            </a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-        <div ng-view autoscroll="true"></div>
-        <footer>
-            <div class="container text-center">
-                <br>
-                <br>
-                <p>Copyright &copy; Show Me the Econ 2016</p>
+
+        </div>
+    </nav>
+
+
+
+
+    <!--<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="navbar-header tv">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars" ></i>
+                </button>
+            <a href="#/">
+                <img class="animated bounceIn" src="img/logo1.png" alt="TV" style="border: 0; width: 150px; height: 150px; border-width:5px ;margin-top:3px">
+            </a>
+        </div>
+        <div class="container">
+            <div class="collapse navbar-collapse navbar-center navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="btn btn-default dropdown-toggle topics-menu navbar-subjects" type="button" id="dropdownMenu3" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true" class="page-scroll" scrollTo="#macro">
+                                Macro
+                            </a>
+                        <ul class="dropdown-menu topics" aria-labelledby="dropdownMenu1">
+                            <li ng-repeat="topic in macro "><a data-ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
+
+                        </ul>
+                    </li>
+                    <li class=" menu dropdown">
+                        <a class="btn btn-default dropdown-toggle topics-menu navbar-subjects" type="button" id="dropdownMenu3" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true" scrollTo="#micro" class="page-scroll">
+                                Micro
+                            </a>
+                        <ul class="dropdown-menu topics" aria-labelledby="dropdownMenu1">
+                            <li ng-repeat="topic in micro "><a data-ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="navbar-subjects" href="#about">
+                                Meet Your Host
+                            </a>
+                    </li>
+                </ul>
             </div>
-        </footer>        
-        <script src="js/ang.js"></script>
-        <script src="js/app.js"></script>
-        <script src="components/topics/topicCtrl.js"></script>
-        <script src="components/home/homeCtrl.js"></script>
-        <script src="components/about/aboutCtrl.js"></script>
-        
-        
-    </body>
+        </div>
+    </nav>-->
+
+
+    <div ng-view autoscroll="true"></div>
+    <footer>
+        <div class="container text-center">
+            <br>
+            <br>
+            <p>Copyright &copy; Show Me the Econ 2016</p>
+        </div>
+    </footer>
+    <script src="js/ang.js"></script>
+    <script src="js/app.js"></script>
+    <script src="components/topics/topicCtrl.js"></script>
+    <script src="components/home/homeCtrl.js"></script>
+    <script src="components/about/aboutCtrl.js"></script>
+
+
+</body>
+
 </html>

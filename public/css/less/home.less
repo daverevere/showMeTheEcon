@@ -1,61 +1,106 @@
-.jumbotron {
-    text-align: center;
-  
-    background: none;
-    // line-height: 100%;
-    // vertical-align: center;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-
-}
-
-.container.jumbo {
+.container.full {
+    // full height
+    // example <div class="container full" >
     position: relative;
     height: 100vh;
     
-    .featured {
-        // text-align: center;
+    // 
+    // Note: there's a bootstrap class called "text-center" as well as "text-right"
+    // I'm  using it in the home.html 
+    //
+    
+    .center-vertically{
+        width: 100%;
         position: absolute;
         top: 50%;
-        transform: translateY(-55%);
-        text-align: center;
-        a.arrow {
-            width: 75px;
-            margin: auto;
-            position: relative;
+        transform: translateY(-50%);
+    }
+    // the &&#intro is equivilent to the CSS line below
+    // .container.full#intro
+    // for an elemetn like in the bottom
+    // <div class="container full" id="intro">
+    //
+    // Note: #intro used to be Jumbotron
+    &&#intro{
+        h1{
+            // this makes font-size Responsive 
+            // view-width , view-height
+            font-size: calc(.4vw + 1vh + 2vmin );          
         }
     }
-    
-    .featured-col {
-        margin-top: 25px;
-        img {
-            width: 100%;
-            height: 275px; 
-        }    
+    .featured {
+        // CSS below applies when screen is large 
+        @media(min-width:768px) {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .items {
+            margin-top: 25px;
+            img {
+                width: 100%;
+                height: 275px; 
+            }    
+        }
+        .featured-video img {
+            width: 420px;
+            height: 400px;
+            margin-top: -25px;
+            margin-left: 50px;
+            border:none;
+        }
     }
-    
-    h1{
-        padding-left: 5%;    
+    .macro{
+        .list{
+            position:relative;
+            height: 500px;
+        }
+        .links {
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 1.6;
+            list-style: none;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+        .links:hover {
+            transition: all ease-in 0.5s;
+            transition: all ease-out 0.5s;
+            opacity: 100 !important;
+            color: white;
+        }
     }
+    .micro{
+        .list{
+            position:relative;
+            height: 500px;
+        }
+        .links {
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 1.6;
+            list-style: none;
+            text-align: center;
+            padding-top: 0px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
     
-    .featured-video img {
-        
-        width: 420px;
-        height: 400px;
-        margin-top: -25px;
-        margin-left: 50px;
-        border:none;
-        
     }
 }
 
-nav.navbar {
-    // display: none;
-}
-// .tv{
-//     position: absolute;
-// }
 body {
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: url(../img/shutterfly4.jpg);
@@ -218,80 +263,39 @@ img::-moz-selection {
     font-size: 440px;
     color: rgb(240, 24, 132);
     padding-top: 0px;
-    text-align: left;
 }
 
 .fa.fa-globe {
     font-size: 440px;
     color: rgb(240, 24, 132);
     padding-top: 0px;
-    text-align: left;
+}
+.globe {
+    // top: 50%;
+    // left:50%;
+    // transform: translate(-50%,-50%);
+    // width: 100%;
+    // position: absolute;
+    cursor: pointer;
 }
 
-.fa.fa-globe:hover {
-    transition: all ease 0.5s !important;
-    opacity: 0 !important;
+.flex500{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
 }
+
 
 
 .reveal {
     transition: all ease-in 0.5s;
     opacity: 100 !important;
     color: white;
+    
 }
 
-.macro-page {
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 1.6;
-    list-style: none;
-    z-index: 2;
-    position: absolute;
-    text-align: center;
-    padding-top: 0px;
-    text-transform: uppercase;
-    opacity: 0;
-    text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
 
-.macro-page:hover {
-    transition: all ease-in 0.5s;
-    transition: all ease-out 0.5s;
-    opacity: 100 !important;
-    color: white;
-}
-
-.micro-page {
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 1.6;
-    list-style: none;
-    z-index: 2;
-    position: absolute;
-    text-align: center;
-    padding-top: 0px;
-    left: 30%;
-    text-transform: uppercase;
-    opacity: 0;
-    text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-// .light {
-//     font-weight: 400;
-// }
-
-.globe {
-    font-size: 440px !important;
-    color: rgb(240, 24, 132) !important;
-    padding-top: 0px !important;
-    cursor: pointer;
-}
-
-.macro {
-    padding: 0px !important;
-}
 
 .about {
     position: absolute;
@@ -301,9 +305,11 @@ img::-moz-selection {
     padding-left: 6px;
     padding-top: 10px;
     margin-right: 35px;
-    margin-top: 35px;
+    margin-top: 75px;
 }
-
+.new-about{
+    margin-top: 100px;
+}
 .topics {
     background: rgba(255, 255, 255, .3) !important;
     border: 0 !important;
@@ -334,49 +340,6 @@ img::-moz-selection {
     left: 22%;
 }
 
-.intro {
-    margin-left: 25px;
-    font-size: 40px !important;
-    width: 100%;
-    height: auto;
-    padding: 300 !important;
-    text-align: center;
-    color: #000;
-    /*background-color: ;*/
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.intro .intro-body {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.intro .intro-body .brand-heading {
-    font-size: 40px;
-}
-
-.intro .intro-body .intro-text {
-    font-size: 18px;
-}
-
-.intro-video {
-    padding-top: 0px !important;
-}
-
-.intro-text {
-    padding-top: 300px;
-}
-
-
-.content-section {
-    padding-top: 0px;
-    width: 100%;
-    margin: auto;
-}
-
 #map {
     width: 100%;
     height: 200px;
@@ -398,29 +361,6 @@ ul.banner-social-buttons {
 .arrow:hover {
     cursor: pointer;
 }
-
-.special {
-    margin-bottom: 0;
-}
-
-// ::-moz-selection {
-//     text-shadow: none;
-//     background: #fcfcfc;
-//     background: rgba(255, 255, 255, .2);
-// }
-
-// ::selection {
-//     text-shadow: none;
-//     background: #fcfcfc;
-//     background: rgba(255, 255, 255, .2);
-// }
-
-
-
-// This css is messing up the Home page
-// div[ng-view] {
-//     // margin-top: 90px;
-// }
 
 .nav .nav-search {
     margin-left: 10px;
@@ -496,15 +436,3 @@ ul.banner-social-buttons {
         padding-top: 50px;
     }
 }
-.home section {
-    height: 100vh;
-    padding: 150px 0px;
-}
-// centerXcenterY IS  A REPLACEMENT FOR THE 'INTRO' IN THE HOME PAGE
-// .centerXcenterY {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   height: 100vh;
-//   text-align: center;
-// }
