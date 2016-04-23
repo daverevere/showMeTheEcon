@@ -1,80 +1,83 @@
-<div class="container full intro" id="intro">
-    <div class="center-vertically text-center">
-            <h1>This site is currently under construction</h1>
-            <a class="page-scroll" scrollto="#featured">
-                <button type="button" class="btn btn-intro">
-                    Watch the Latest Episode
-                </button>
+<div class="home-page">
+    <div class="container full intro" id="intro">
+        <div class="center-vertically text-center">
+                <h1>This site is currently under construction</h1>
+                <a class="page-scroll" scrollto="#featured">
+                    <button type="button" class="btn btn-intro">
+                        Watch the Latest Episode
+                    </button>
+                </a>
+        </div>
+    </div>
+
+    <div class="container full" id="featured">
+        <div class="featured text-center">
+            <div class="row">
+                <div class=" col-lg-6 col-md-6 col-sm-6">
+                    <h1>Featured<br>Picks</h1>
+                </div>
+                <div class="featured-video col-lg-6 col-md-6 col-sm-6">
+                    <img class="" border="5" src="img/shutterstock5.png" alt="TV">
+                    <!--<iframe class="" width="375" height="207" src="https://www.youtube.com/embed/0AtGd0Nmnrs?rel=0&amp;showinfo=0" frameborder="0"
+                        allowfullscreen></iframe>-->
+                </div>
+            </div>
+            <div class="row items">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <a href="http://econshark.com" target="_blank"><img src="http://economics.utah.edu/1economics_1.jpg" alt="TV"></a>
+                    <p style="font-size: 20px;">Copa Di Vino</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <a href="http://dirkmateer.com" target="_blank"><img src="img/intro-bg.jpg" alt="TV"></a>
+                    <p style="font-size: 20px; margin-bottom: 10px;">Khan Academy</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <a href="http://econshark.com" target="_blank"><img src="https://www.washcoll.edu/live/image/gid/64/width/650/11491_econ_dollarbill.jpg" alt="TV"></a>
+                    <p style="font-size: 20px;">Slawsa on Shark Tank</p>
+                </div>
+            </div>
+            <a scrollto="#macro" class="arrow page-scroll">
+                <img class="arrow" src="img/arrow.png">
             </a>
+        </div>
     </div>
-</div>
 
-<div class="container full" id="featured">
-    <div class="featured text-center">
-        <div class="row">
-            <div class=" col-lg-6 col-md-6 col-sm-6">
-                <h1>Featured<br>Picks</h1>
+    <div class="container full" id="macro">
+        <div class="macro center-vertically text-center not-on-small">
+            <h1>Macroeconomics</h1>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 flex500">
+                    <i class="fa fa-globe"></i>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 list">
+                    <ul class="links">
+                        <li ng-repeat="topic in macro"><a ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="featured-video col-lg-6 col-md-6 col-sm-6">
-                <img class="" border="5" src="img/shutterstock5.png" alt="TV">
-                <!--<iframe class="" width="375" height="207" src="https://www.youtube.com/embed/0AtGd0Nmnrs?rel=0&amp;showinfo=0" frameborder="0"
-                    allowfullscreen></iframe>-->
-            </div>
+            <a scrollto="#micro" class="page-scroll">
+                <img class="arrow" src="img/arrow.png">
+            </a>
         </div>
-        <div class="row items">
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <a href="http://econshark.com" target="_blank"><img src="http://economics.utah.edu/1economics_1.jpg" alt="TV"></a>
-                <p style="font-size: 20px;">Copa Di Vino</p>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <a href="http://dirkmateer.com" target="_blank"><img src="img/intro-bg.jpg" alt="TV"></a>
-                <p style="font-size: 20px; margin-bottom: 10px;">Khan Academy</p>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <a href="http://econshark.com" target="_blank"><img src="https://www.washcoll.edu/live/image/gid/64/width/650/11491_econ_dollarbill.jpg" alt="TV"></a>
-                <p style="font-size: 20px;">Slawsa on Shark Tank</p>
-            </div>
-        </div>
-        <a scrollto="#macro" class="arrow page-scroll">
-            <img class="arrow" src="img/arrow.png">
-        </a>
     </div>
-</div>
 
-<div class="container full" id="macro">
-    <div class="macro center-vertically text-center">
-        <h1>Macroeconomics</h1>
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 flex500">
-                <i class="fa fa-globe"></i>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 list">
-                <ul class="links">
-                    <li ng-repeat="topic in macro"><a ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
-                </ul>
-            </div>
-        </div>
-        <a scrollto="#micro" class="page-scroll">
-            <img class="arrow" src="img/arrow.png">
-        </a>
-    </div>
-</div>
-
-<div class="container full" id="micro">
-    <div class="micro text-center center-vertically ">
-        <h1 >Microeconomics</h1>
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 list">
-                <ul  class="links">
-                    <li ng-repeat="topic in micro"><a ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 flex500  ">
-                <i ng-mouseenter="hover=true" class="globe fa fa-university "></i>
+    <div class="container full" id="micro">
+        <div class="micro text-center center-vertically not-on-small ">
+            <h1 >Microeconomics</h1>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 list">
+                    <ul  class="links">
+                        <li ng-repeat="topic in micro"><a ng-href="#topics/{{topic.gsx$page.$t}}">{{topic.gsx$title.$t}}</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 flex500  ">
+                    <i ng-mouseenter="hover=true" class="globe fa fa-university "></i>
+                </div>
             </div>
         </div>
     </div>
 </div>
+    
 
 
 <!--<div class="home">-->
