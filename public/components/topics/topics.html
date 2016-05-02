@@ -2,10 +2,12 @@
     <!-- Economic Section -->
     <section class="feature-topic container">
         <div class="row feature-row">
+        <h1 class="feature-title">{{featuredTopic.title}}</h1> 
+                  <br>
+                <br>
             <div class="col-lg-5 col-md-5 col-sm-5 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
-                <h1 class="feature-title">{{featuredTopic.title}}</h1> {{topic.gsx$title.$t}}
-                <br>
-                <br>
+                
+      
                 <div class="feature-space">
                     <h4>{{featuredTopic.featured}}</h4>
                     <p class="feature-text">{{featuredTopic.description}}
@@ -18,8 +20,8 @@
                     <br>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
-                <img class="feature-image" ng-src="{{featuredTopic.icon_2}}" alt="Feature Image" style="width: 400px; height: 290px;">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <img class="feature-image" ng-src="{{featuredTopic.icon_2}}" alt="Feature Image" style="width: 450px; height: 310px;">
             </div>
         </div>
     </section>
