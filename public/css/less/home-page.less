@@ -1,10 +1,20 @@
-.home-page{
+.home-page {
     .container.full {
+
+
         // full height
         // example <div class="container full" >
         position: relative;
         height: 100vh;
 
+        @media(max-width:1200px) {
+            height: auto;
+        
+        }
+        
+        .hundred {
+            height: 100vh;
+        }
         // 
         // Note: there's a bootstrap class called "text-center" as well as "text-right"
         // I'm  using it in the home.html 
@@ -45,24 +55,39 @@
 
             h1 {
                 padding-top: 100px;
-                padding-left: 30%;
+                /*padding-left: 30%;*/
+                font-size: 108px;
             }
+
             .items {
                 margin-top: 75px;
-                margin-left: 70px;
+               
+            }
 
-                img {
+            img {
                     width: 100%;
-                    height: 150px; 
+                    height: 150px;
+                    max-width: 350px; 
 
                 }
 
             }
+
+            img.arrow {
+                  margin-top: 0px;
+                  padding-top: 0px;
+                  width: 70px;
+                  height: 40px;
+                  border-style: none;
+
+            }
             .featured-video img {
-                width: 390px;
-                height: 320px;
+                width: 420px;
+                height: 350px;
                 margin-top: 35px;
-                right: 30%;
+            /*    right: 30%;*/
+                margin: auto;
+                margin-left: -30px;
                 border:none;
                 z-index: 0;
                 position: absolute;
@@ -70,10 +95,12 @@
             .featured-video iframe {
                position: relative;
                 margin-top: 102px;
-                margin-right: 155px;
+               /* margin-right: 155px;*/
                 z-index: 1;
             }
         }
+
+
         .macro{
                        // CSS below applies when screen is large 
             @media(min-width:768px) {
@@ -83,13 +110,14 @@
 
             }
             .arrow {
-                  margin-top: 0px !important;
-  padding-top: 0px !important;
-  width: 70px;
-  height: 40px;
-  border-style: none;
+              margin-top: 0px !important;
+              padding-top: 0px !important;
+              width: 70px;
+              height: 40px;
+              border-style: none;
 
             }
+
 
             .row {
                 top: -90px;
@@ -104,7 +132,24 @@
                 height: 440px;
                 right: 80px;
                 top: -30px;
+
+                @media(max-width:1200px) {
+
+                      background: url("http://www.iconsdb.com/icons/preview/deep-pink/globe-2-xxl.png");
+                      background-size: cover;
+                      background-repeat: no-repeat;
+                      right: 0px;
+
+                }
+
             }
+
+            .globe {
+                @media(max-width:1200px) {
+                    display:none;
+                }
+            }
+
             .links {
 
                 padding: 0;
@@ -150,11 +195,11 @@
 
             }
             .links {
-                  -webkit-transition: all ease-in 0.5s;
-  transition: all ease-in 0.5s;
-  opacity: 100 !important;
-  color: white;
-                position: absolute;
+                -webkit-transition: all ease-in 0.5s;
+                transition: all ease-in 0.5s;
+                opacity: 100 !important;
+                color: white;
+                position: relative;
                 top: 50%;
                 left:50%;
                 transform: translate(-50%,-50%);
@@ -164,7 +209,7 @@
                 line-height: 1.6;
                 list-style: none;
                 text-align: center;
-                padding-top: 0px;
+                padding: 0px;
                 text-transform: uppercase;
                 text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
             }
@@ -174,6 +219,7 @@
 }
 
 
+
 body {
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: url(../img/shutterfly4.jpg);
@@ -181,6 +227,7 @@ body {
     background-attachment: fixed;
     overflow-x: hidden;
 }
+
 h5 {
     color: black;
     display: inline-block;

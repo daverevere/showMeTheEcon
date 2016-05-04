@@ -1,4 +1,10 @@
+    
+
 .navbar-custom {
+
+
+
+
     text-align: center;
     margin: auto;
     background: url("../img/navbar.png") !important;
@@ -7,7 +13,12 @@
     border-bottom: 3px solid rgba(255,255,255,.3); 
     // background-color: red;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;  
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+/*    border: 3px solid red;  */
+
+    @media(max-width:768px){
+            display: none;
+        }
     
     .navbar-brand {
         font-weight: 700;
@@ -62,8 +73,8 @@
 // you must commnet it if you want to enable the new navbar
 nav{
     .logo{
-        width: 310px;
-        height: 120px;
+        width: 110px;
+        height: 105px;
         padding: 0px;
     }
     
@@ -163,9 +174,8 @@ nav{
     font-weight: bolder !important;
     margin-left:20px;
 }
-
-.navbar-center {
-/*    width: 550px;
+/*.navbar-center {
+    width: 550px;
     margin:auto;
     text-align: center;
     display: inline-block;
