@@ -1,7 +1,13 @@
+<?php
+if($_POST["message"]) {
+    mail("daverevere@gmail.com", "Form to email message", $_POST["message"], "From: an@email.address");
+}
+?>
 
 <div class="row">
 <br>
 <br>
+
 <br>
 <br>
 	<div class="col-lg-8 col-md-8 col-sm-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
@@ -16,22 +22,18 @@
 	</div>
 
 </div>
-<br>
 
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-sm-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
 
-		<form method="post" action="mailto:joyofecon@gmail.com?subject=Show Me The Econ!" enctype="text/plain">
-		<p>Name: <input name="Name" type="text" id="Name" size="20"></p>
-		<p>E-mail: <input name="Email" type="text" id="E-mail" size="20"></p>
-		<p>Message:</p>
-		<textarea name="Message" cols="55" rows="5"
+		<form method="post" action="contact.php" enctype="text/plain">
+<!-- 		<p>Name: <input type="text" id="Name" size="20"></p>
+		<p>E-mail address: <input type="text" id="E-mail" size="20"></p> -->
+		
+		<textarea name="message" cols="55" rows="5"
 		></textarea>
-		<br>
-		<input style="margin-left:40%;" class="btn btn-pink" type="submit" value="Submit">
+		<input class="btn btn-pink" type="submit" value="Submit">
 </form>
-
-
 	</div>
 
 </div>
