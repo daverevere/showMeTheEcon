@@ -1,40 +1,43 @@
+    <div class="showMe">
+        <a href="#/">
+            <img class="animated bounceIn logo " src="img/logo1.png" alt="TV" style="border: 0; margin-top: 5px;">
+        </a>
+    </div>
+    
 <div class="topics-page">
     <!-- Economic Section -->
-    <section class="feature-topic container">
+    <section id="feature-section" class="feature-topic container">
         <div class="row feature-row">
         <h1 class="feature-title">{{featuredTopic.title}}</h1> 
-                  <br>
-                <br>
-            <div class="col-lg-5 col-md-5 col-sm-5 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+                  <br><br>
+            <div class="col-lg-5 col-md-5 col-sm-7 col-lg-offset-1 col-md-offset-1">
                 
       
                 <div class="feature-space">
                     <h4>{{featuredTopic.featured}}</h4>
                     <p class="feature-text">{{featuredTopic.description}}
-                        <br>
+                    <br>
                         <a href="{{featuredTopic.link}}" target="_blank" class="btn btn-pink" style="margin-top:7px" role="button">Show me the econ!</a>
-                        <br>
-                        <br>
-                        <br>
+                       
                     </p>
                     <br>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <img class="feature-image" ng-src="{{featuredTopic.icon_2}}" alt="Feature Image" style="width: 450px; height: 310px;">
+            <div class="col-lg-5 col-md-5 col-sm-3 feature-image-col">
+                <img class="feature-image" ng-src="{{featuredTopic.icon_2}}" alt="Feature Image">
             </div>
         </div>
     </section>
 
-    <section class="container resource-section">
+    <section class="resource-section">
         <div class="row tabs-row">
-            <div>
+            <div >
                 <!--             <h3>{{currentTopic}} Resources</h3> -->
-                <ul class="nav nav-tabs" role="tablist">
+                <ul class="nav nav-tabs" role="tablist" >
                     <li class="dropdown">
-                        <button class="btn btn-default dropdown-toggle filter-button" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                        <button  class="btn btn-default dropdown-toggle filter-button" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="true">
-                        K-5th Grade
+                        K-5th <span class="grade-hide">Grade</span>
                         <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu filter-drop" aria-labelledby="dropdownMenu1">
@@ -46,9 +49,9 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <button class="btn btn-default dropdown-toggle filter-button" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+                        <button  class="btn btn-default dropdown-toggle filter-button" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="true">
-                        6-12th Grade
+                        6-12th <span class="grade-hide">Grade</span>
                         <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu filter-drop" aria-labelledby="dropdownMenu1">
@@ -73,7 +76,7 @@
                             <li ng-click="filterResources('college')"><a>All</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                      <li class="dropdown search">
                         <form class="nav-search" role="search">
                             <div class="form-group">
                                 <input ng-model='searchFilter' type="text" class="form-control" placeholder="Search">
@@ -86,11 +89,11 @@
 
         <div class="row ">
             <div class="topic-resources " ng-repeat="resource in resources| filter: gradeFilter | filter: mediaFilter | filter: searchFilter">
-                <div class="resource-item col-lg-6 col-md-6 col-sm-12">
-                            <div class="item-title">&nbsp;&nbsp;{{resource.title}}</div>
-                            <hr style="border-top: 2px solid rgba(255,255,255,.6); margin:10px">
+                <div class="resource-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="item-title">{{resource.title}}</div>
+                            <hr class="hr-topics">
                         <div >
-                            <a ng-href="{{resource.sourcelink}}" target="_blank"><img ng-src="{{resource.image}}" alt="resource image" style="width: 190px; height: 120px;"></a>
+                            <a ng-href="{{resource.sourcelink}}" target="_blank"><img ng-src="{{resource.image}}" alt="resource image"></a>
                         </div>
                         <div >
                             <p class="resource-text">{{resource.description}}</p>

@@ -1,0 +1,9 @@
+fix small phone size topics page - filters
+
+fix about page on small ipad view;
+
+fix bigscreen view;
+
+create ipad landscape view
+
+fix iphone plus view

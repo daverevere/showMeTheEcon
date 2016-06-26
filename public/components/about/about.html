@@ -1,12 +1,13 @@
+    <div class="showMe">
+        <a href="#/">
+            <img class="animated bounceIn logo " src="img/logo1.png" alt="TV" style="border: 0;">
+        </a>
+    </div>
 
 <div class="row new-about">
-<br>
-<br>
-<br>
-<br>
-	<div class="col-lg-8 col-md-8 col-sm-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
-	<img src="img/about.jpg" ALIGN="right" style="width:400px; height: 250px; margin: 20px 0px 5px 9px">
-		<h3>Charity-Joy Acchiardo</h3><p>is a Lecturer of Economics at the University of Arizona. She understands that many students perceive the study of economics as uninteresting and disconnected to the realities of their everyday lives. But she also knows that isn’t true. She gets her students actively engaged in observing their own worlds and solving the puzzles they find there.</p>
+	<div class="col-lg-8 col-md-8 col-sm-12 col-lg-offset-2 col-md-offset-2">
+	<img src="img/about.jpg" ALIGN="right" class="about-pic">
+		<h3 class="name">Charity-Joy Acchiardo</h3><p>is a Lecturer of Economics at the University of Arizona. She understands that many students perceive the study of economics as uninteresting and disconnected to the realities of their everyday lives. But she also knows that isn’t true. She gets her students actively engaged in observing their own worlds and solving the puzzles they find there.</p>
 		<p> 
 		 Acchiardo is a frequent speaker at teaching workshops across the US and Canada where she shares tips for making economics come alive for students. She has an MBA from Middlebury Institute of International Studies and a PhD from George Mason University where she was the Olofsson Weaver fellow in political economy.</p> 
 		
@@ -19,21 +20,17 @@
 <br>
 
 <div class="row">
-	<div class="col-lg-8 col-md-8 col-sm-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
-
-		<form method="post" action="about/send">
-		<p>Name: <input name="name" type="text" id="Name" size="20"></p>
-		<p>E-mail: <input name="email" type="text" id="E-mail" size="20"></p>
-		<p>Message:</p>
-		<textarea name="message" cols="55" rows="5"
-		></textarea>
-		<br>
-		<input style="margin-left:40%;" class="btn btn-pink" type="submit" ng-click="thanks()" value="Submit">
-</form>
-
-
+	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
+		<form class="message" method="post" action="about/send">
+				<p>Name: <input name="name" type="text" id="Name" size="20"></p>
+				<p>E-mail: <input name="email" type="text" id="E-mail" size="20"></p>
+				<p>Message:</p>
+				<textarea name="message" cols="55" rows="5"
+				></textarea>
+				<br>
+				<input class="submit btn btn-pink" type="submit" ng-click="thanks()" value="Submit">
+		</form>
 	</div>
-
 </div>
 
 

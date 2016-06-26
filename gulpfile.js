@@ -10,7 +10,7 @@ const gulpif = require('gulp-if');
 const gutil = require('gulp-util');
 const cssmin = require('gulp-cssmin');
 
-
+const sourcemaps = require('gulp-sourcemaps');
 const production = process.env.NODE_ENV === 'production';
 
 
@@ -49,6 +49,7 @@ gulp.task('less', function() {
         gutil.log(err);
         this.emit('end');
     }))
+    .pipe(sourcemaps.write())
     .pipe(autoprefixer())
     .pipe(concat('styles.css'))
     // .on('error',console.error.bind(console))
