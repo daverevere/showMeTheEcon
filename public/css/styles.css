@@ -185,12 +185,12 @@ img::-moz-selection {
   text-transform: uppercase;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-@media (max-width: 785px) {
+@media (max-width: 734px) {
   .navbar-custom {
     display: none;
   }
 }
-@media (min-width: 977px) and (max-width: 1025px) {
+@media (min-width: 739px) and (max-width: 1025px) {
   .navbar-custom {
     background: url("../img/shutterstock8.png") !important;
     background-attachment: fixed;
@@ -207,10 +207,7 @@ img::-moz-selection {
   outline: 0;
 }
 .navbar-custom .navbar-brand .navbar-toggle {
-  padding: 0px 6px;
-  font-size: 16px;
-  color: #fff;
-  background-image: url("../img/shutterstock4.png");
+  display: none;
 }
 .navbar-custom .navbar-brand .navbar-toggle:focus,
 .navbar-custom .navbar-brand .navbar-toggle:active {
@@ -248,12 +245,12 @@ nav .logo {
   height: 105px;
   padding: 0px;
 }
-@media (min-width: 768px) {
+@media (min-width: 735px) {
   nav a.navbar-subjects {
     font-size: calc(2vw);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 790px) {
   nav a.navbar-subjects {
     font-size: 20px;
   }
@@ -315,9 +312,7 @@ nav .dropdown:hover .topics {
   max-height: 400px;
 }
 .navbar-header {
-  padding-left: 20px !important;
-  margin-left: 20px !important;
-  background-image: url("../img/shutterstock4.png");
+  display: none;
 }
 .navbar-subjects {
   margin-top: 40px;
@@ -457,7 +452,7 @@ nav .dropdown:hover .topics {
   left: 2px;
 }
 footer {
-  padding: 50px 0;
+  padding-bottom: 50px;
   background-color: transparent;
 }
 footer p {
@@ -573,12 +568,7 @@ footer p {
   float: left;
   margin-right: 20px;
   margin-bottom: 25px;
-  width: 100%;
-  background: url(../img/tv4.png) !important;
-  background-image: url("img/tv4.png") !important;
-}
-.topics-page .feature-topic .feature-text {
-  margin-right: 5%;
+  width: 400px;
 }
 @media (min-width: 319px) {
   .topics-page .feature-topic .feature-text {
@@ -586,9 +576,10 @@ footer p {
   }
 }
 .topics-page .feature-topic .feature-space {
-  width: 90%;
-  margin: auto;
+  width: 100%;
+  margin-left: 17px;
   padding-bottom: 0px;
+  text-align: left;
 }
 .topics-page .feature-topic .feature-row {
   padding-top: 5%;
@@ -686,8 +677,8 @@ footer p {
   border-bottom: 0;
 }
 .topics-page .tabs-row {
-  margin: 0;
-  padding: 0;
+  margin-right: 20px;
+  padding-right: 20px;
 }
 .topics-page .tabs-padding {
   padding: 0;

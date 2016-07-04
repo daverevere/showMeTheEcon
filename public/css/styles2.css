@@ -9,7 +9,7 @@ p {
 
 .home section {
     height: 100vh;
-    padding: 150px 0;
+    padding-top: 150px;
     
 }
 
@@ -48,6 +48,10 @@ p {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.lead-sentence {
+    margin-top: 70px;
 }
 
 .feature-col {
@@ -100,6 +104,8 @@ img {
     height: 207px; 
 }
 
+
+
 .feature-selections {
 
     width: 83%; 
@@ -139,14 +145,6 @@ a {
     transition: all .2s ease-in-out;
 }
 
-
-.globe {
-    font-size: 480px;
-    color: rgb(240, 24, 132) !important;
-    padding-top: 0px !important;
-    cursor: pointer;
-}
-
 .macro-page {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
@@ -156,8 +154,12 @@ a {
     z-index: 2;
     position: absolute;
     text-align: center;
-    padding-top: 0px;
+    padding-top: 80px;
     text-transform: uppercase;
+}
+
+.iphone-macro-page {
+    display: none;
 }
 
 .feature-hr {
@@ -183,7 +185,7 @@ a {
     z-index: 2;
     position: absolute;
     text-align: center;
-    padding-top: 0;
+    padding-top: 60px;
     padding-left: 0;
     text-transform: uppercase;
 }
@@ -207,7 +209,7 @@ a {
 
 .featured-images {
     width: 260px;
-    height: 150px
+    height: 150px;
 }
 
 .micro-logo {
@@ -215,15 +217,27 @@ a {
     width: 400px;
 }
 
-@media(min-width:789px){
+.macro-logo {
+     border: none;
+    width: 450px;
+    height: 430px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+@media(min-width:740px){
         .phone-size {
             display: none;
         }
+}
+
+    /*ipad*/
+@media(min-width:768px) and (max-width:1435px) {
+
+
+    .lead-sentence {
+        margin-top: 10px;
     }
-
-    /*ipad landscape*/
-@media(min-width:789px) and (max-width:1125px) {
-
     .featured {
         padding-top: 82px !important;
     }
@@ -245,11 +259,6 @@ a {
 
     .feature-margin {
     margin: 49px auto 10px auto;
-    }
-
-
-    .feature-hr {
-        
     }
 
     .feature-col{
@@ -280,142 +289,63 @@ a {
     .micro-logo {
         width: 380px;
     }
-
-    .globe {
-        font-size: 400px !important;
-    }
-
-    .macro-page {
-
-
-    }
    
-}        
-    /*ipad portrait*/
-@media(min-width:740px) and (max-width:788px) {
+}     
 
-    .feature-selections {
 
-    width: 100%; 
-    margin: auto;
-}
-    .hr {
-        display: none;
-    }
-    
-    h3 {
-        text-align: center;
-    }
-    .meet {
-        text-align: center;
-        font-size: 38px;
-    }
-    .about-pic {
-        width:290px; 
-        height: 190px; 
-        margin-right: 13px;
-    }
-    
-    .name {
-        width: 100%;
-        font-size: 24px;
-        text-align: left !important;
-    }
-    
-    .message {
-        margin-left: 15px;
-    }
-    
-    .message > textarea {
-        width: 90%;
-    }
-    
-    .submit {
-        margin: auto !important;
-    }
-    .home section {
-       display: none;
-    }
+/*ipad portrait*/
+@media(min-width:768px) and (max-width:1000px) {
 
-    .small-size {
-        margin:0 !important;
-    }
-    
-    .featured-images {
-    width: 210px;
-    height: 120px;
-    margin: 10px;
-    }
-
-    .padding {
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-    }
-    
-    .macro {
-    font-size: 63px !important;
-    text-align: center;
-    margin-left: 30px;
-    }
-    
-    
-    .video {
-    margin: auto; 
-    padding-top: 20px !important;
-    }
-
-    .video-image-small {
-        z-index: -1;
-        position: absolute;
-        border: 0;
-        width: 625px !important; 
-        height: 523px !important; 
-        margin-bottom: 105px; 
-        right: 59px;
-    }
-
-    .video-small {
-        float: none !important;
-        position: relative;
-        margin-top: 116px;
-        height:292px;
-        width: 528px;
-    }
-    
-    .btn-intro {
-        margin-top: 110px;
-        text-align: center !important;
-        margin-left: 178px;
-    }
-    
-    .arrow-row {
-        display: none;
-    }
-
-    h2 {
-     font-size: 16px;    
-    }
-    
-    h1 {
-        font-size: 26px !important;
-    
-    }
-    
-
-    .intro-small{
-        display:none;
-    }
-    
-    .globe {
-        font-size: 460px !important;
-        position: absolute;
-        z-index: -1 !important;
-        margin-top: 60px;
-        left:173px;
-          color: rgba(231, 68, 177, 0.9) !important;
-    }
-    
     .macro-page {
+        padding-top: 0 !important;
+    }
+    h1 {
+        font-size: 50px;
+    }
+
+    .video-image {
+        margin-right: 150px !important;
+        padding-right: 50px !important;
+        height: 245px;
+        width: 335px;
+    }
+
+    .video {
+        margin-top: 109px;
+        margin-left: 55px;
+        margin-right: 99px !important;
+        width: 243px;
+        height: 136px; 
+    }
+
+    .featured-images {
+        width: 170px !important;
+        height: 110px;
+    }
+
+    .macro-logo {
+        width: 300px; 
+        height: 300px;
+    }
+
+       .micro-logo {
+        width: 260px; 
+        height: 280px;
+    }
+
+   
+}
+
+/*iphone plus landscape*/
+@media(min-width:570px) and (max-width:767px) {
+
+
+        .macro-page {
+        display: none;
+    }
+
+        .iphone-macro-page {
+        display: block !important;
         font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
         font-weight: 900 !important;
         line-height: 2;
@@ -426,53 +356,11 @@ a {
         padding-top: 0px;
         padding-left: 0px;
     }
-    
-    .arrow {
-        margin-top: 140px !important;
+
+        .subtopics {
+        font-size: 20px;
+        line-height: 1.5;
     }
-    
-    a {
-        color: black !important;
-        font-weight: 1700 !important;
-        text-transform: none !important;
-    }
-    
-    .university {
-        margin-top: 100px;
-        font-size: 280px !important;
-        position: absolute;
-        z-index: -1 !important;
-        left:226px;
-          color: rgba(231, 68, 177, 0.9) !important;
-    }
-    
-     #latest-small {
-        margin-top:25px;
-    }
-
-    #macro-section-small {
-        margin-top: 45px;
-    }
-
-    #micro-section-small {
-        margin-top: 55px;
-    }
-
-    .micro-logo {
-        width: 300px;
-    }
-
-    .micro-page {
-    position: relative;
-}
-
-
-
-   
-}
-
-/*iphone plus landscape*/
-@media(min-width:570px) and (max-width:739px) {
 
 
     .video-image-small {
@@ -495,6 +383,10 @@ a {
         .globe {
         left:173px !important;
     }
+        .macro-logo {
+        margin-left: 170px !important;
+        width: 440px;
+        }
 
     .micro-logo {
 
@@ -506,8 +398,39 @@ a {
     }
 
 }
+
 /*iphone and iphone plus landscape*/
 @media(min-width:560px) and (max-width:739px) {
+
+        .macro-page {
+        display: none;
+    }
+
+        .iphone-macro-page {
+        display: block !important;
+        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-weight: 900 !important;
+        line-height: 2;
+        z-index: 1 !important;
+        position: relative !important;
+        color: white !important;
+        text-align: center;
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+
+        .subtopics {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .subtopics {
+        font-size: 30px;
+    }
+
+    .feature-selections-text {
+        font-size: 30px !important;
+    }
 
     .about-pic {
         width:210px; 
@@ -593,7 +516,7 @@ a {
     }
     
     h1 {
-        font-size: 26px !important;
+        font-size: 56px !important;
     
     }
     
@@ -603,15 +526,6 @@ a {
 
     .intro-small{
         display:none;
-    }
-    
-    .globe {
-        font-size: 460px !important;
-        position: absolute;
-        z-index: -1 !important;
-        margin-top: 40px;
-        left:83px;
-          color: rgba(231, 68, 177, 0.9) !important;
     }
     
     .macro-page {
@@ -627,13 +541,18 @@ a {
     }
     
     a {
-        color: black !important;
+        color: white;
         font-weight: 1700 !important;
         text-transform: none !important;
     }
     .micro-logo {
-        margin-left: 85px;
+        margin-left: 115px;
         width: 340px;
+    }
+
+    .macro-logo {
+        margin-left: 73px;
+        width: 440px;
     }
 
     .micro-page {
@@ -659,6 +578,34 @@ a {
 
 /*iphone plus portrait*/
 @media(min-width:321px) and (max-width:559px) {
+
+        .macro-page {
+        display: none;
+    }
+
+        .iphone-macro-page {
+        display: block !important;
+        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-weight: 900 !important;
+        line-height: 2;
+        z-index: 1 !important;
+        position: relative !important;
+        color: white !important;
+        text-align: center;
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+
+        .subtopics {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .macro-logo {
+        width: 400px;
+        height: 380px;
+        margin-left: 20px;
+    }
 
     .about-pic {
         width:290px; 
@@ -775,7 +722,7 @@ a {
     }
     
     a {
-        color: black !important;
+        color: white !important;
         font-weight: 1700 !important;
         text-transform: none !important;
     }
@@ -811,7 +758,7 @@ a {
     }
 
     .arrow-row {
-        margin-top: 65px;
+        margin-top: 25px;
     }
 
     .micro-logo {
@@ -831,17 +778,15 @@ a {
 /*iphone portrait*/
 @media(max-width:320px) {
 
-.micro-logo {
-  width: 290px;
+    .micro-logo {
+        width: 290px;
+    }
 
-}
+    .micro-page{
+        position: relative;
+        margin-left: 15px;
 
-.micro-page{
-    position: relative;
-    margin-left: 15px;
-
-}
-
+    }
 
     .hr {
         display: none;
@@ -859,13 +804,12 @@ a {
     }
 
     #micro-section-small {
-
         margin-top: 54px;
     }
 
-  .meet {
+    .meet {
       font-size: 31px;
-  }
+    }
 
     .about-pic {
         width:290px; 
@@ -939,15 +883,27 @@ a {
         display:none;
     }
     
-    .globe {
-        font-size: 360px !important;
-        position: absolute;
-        z-index: -1 !important;
-        left:6px;
-          color: rgba(231, 68, 177, 0.9) !important;
+    .macro-logo {
+        width: 300px;
+        height: 300px;
+        margin-left: 16px;
     }
     
     .macro-page {
+        display: none;
+        /*font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-weight: 900 !important;
+        line-height: 2;
+        z-index: 1 !important;
+        position: relative !important;
+        color: white !important;
+        text-align: center;
+        padding-top: 0px;
+        padding-left: 0px;*/
+    }
+
+    .iphone-macro-page {
+        display: block !important;
         font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
         font-weight: 900 !important;
         line-height: 2;
@@ -958,12 +914,18 @@ a {
         padding-top: 0px;
         padding-left: 0px;
     }
+
+    .subtopics {
+        font-size: 20px;
+        line-height: 1.5;
+    }
     
     a {
-        color: black !important;
+        color: white !important;
         font-weight: 1700 !important;
         text-transform: none !important;
     }
-    
-  
+
 }
+    
+
