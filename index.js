@@ -7,15 +7,16 @@ var bodyParser = require('body-parser');// Parses body of ajax || route .
 // var mongoose = require('mongoose'); 
 var session = require('express-session'); // Allows us to have cookies 
 
-// mongoose.connect('mongodb://localhost/econ');
-var topics = require('./models/topics.js');//this is how we access our database. we're designating the specific location of our database for require to look up.
+mongoose.connect('mongodb://localhost/econ');
+var topics = require('./models/topics.js');
+//this is how we access our database. we're designating the specific location of our database for require to look up.
 
-// var unemployment = new topics();//create a new instance of our topic model
-// unemployment.subject = "Macro";
-// unemployment.title = "Unemployment";
-// unemployment.description="This is a description of unemployment.";
-// unemployment.icon="image link";
-// unemployment.resources=[];
+var unemployment = new topics();//create a new instance of our topic model
+unemployment.subject = "Macro";
+unemployment.title = "Unemployment";
+unemployment.description="This is a description of unemployment.";
+unemployment.icon="image link";
+unemployment.resources=[];
 
 server.use(bodyParser.json({limit: '50mb'}));
 server.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
