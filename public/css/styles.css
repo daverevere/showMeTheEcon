@@ -185,12 +185,12 @@ img::-moz-selection {
   text-transform: uppercase;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-@media (max-width: 734px) {
+@media (max-width: 767px) {
   .navbar-custom {
     display: none;
   }
 }
-@media (min-width: 739px) and (max-width: 1025px) {
+@media (min-width: 735px) and (max-width: 1025px) {
   .navbar-custom {
     background: url("../img/shutterstock8.png") !important;
     background-attachment: fixed;

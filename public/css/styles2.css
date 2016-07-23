@@ -1,5 +1,3 @@
-
-
 p {
     font-family: Futura,Helvetica,Arial,sans-serif;
     /* margin: 0 0 25px; */
@@ -10,7 +8,6 @@ p {
 .home section {
     height: 100vh;
     padding-top: 150px;
-    
 }
 
 .content-section {
@@ -33,7 +30,6 @@ p {
 }
 
 .feature-margin {
-
     margin: 36px auto 10px auto;
 }
 
@@ -104,8 +100,114 @@ img {
     height: 207px; 
 }
 
+    @media(min-width:1457px) and (max-width:1487px) {
+        
+        .video {width: 385px;
+        height: 215px;
+        margin-left: 25px;
+        margin-top: 130px;
+     }
+    }
+    @media(min-width:1488px) and (max-width:1508px) {
+        
+        .video {width: 385px;
+        height: 215px;
+        margin-left: 30px;
+        margin-top: 130px;
+     }
+    }
+ 
+    @media(min-width:1508px) and (max-width:1528px) {
+        
+        .video {width: 385px;
+        height: 215px;
+        margin-left: 45px;
+        margin-top: 130px;
+     }
+    }
 
+        @media(min-width:1528px) and (max-width:1571px) {
+        
+        .video {width: 385px;
+        height: 215px;
+        margin-left: 55px;
+        margin-top: 130px;
+     }
+    }
 
+            @media(min-width:1572px) and (max-width:1612px) {
+        
+        .video {width: 385px;
+        height: 215px;
+        margin-left: 70px;
+        margin-top: 130px;
+     }
+    }
+                @media(min-width:1613px) and (max-width:1653px) {
+        
+        .video {width: 385px;
+        height: 215px;
+        margin-left: 90px;
+        margin-top: 130px;
+     }
+    }
+
+                    @media(min-width:1654px) and (max-width:1700px) {
+        
+        .video {width: 385px;
+        height: 215px;
+        margin-left: 110px;
+        margin-top: 130px;
+     }
+    }
+
+                        @media(min-width:1700px) and (max-width:1745px) {
+        
+        .video {width: 385px;
+        height: 215px;
+        margin-left: 125px;
+        margin-top: 130px;
+     }
+    }
+    
+        @media(min-width:1746px) {
+        
+        .video {width: 385px;
+        height: 215px;
+        margin-left: 145px;
+        margin-top: 130px;
+     }
+    }
+
+    
+        @media(min-width:1785px) {
+        
+        .video {width: 385px;
+        height: 215px;
+        margin-left: 162px;
+        margin-top: 130px;
+     }
+    }
+
+            @media(min-width:1832px) {
+        
+        .video {width: 385px;
+        height: 215px;
+        margin-left: 182px;
+        margin-top: 130px;
+     }
+
+            @media(min-width:1877px) {
+        
+        .video {width: 385px;
+        height: 215px;
+        margin-left: 202px;
+        margin-top: 130px;
+     }
+
+    }
+     
+    }
 .feature-selections {
 
     width: 83%; 
@@ -157,10 +259,10 @@ a {
     padding-top: 80px;
     text-transform: uppercase;
 }
-
+/*
 .iphone-macro-page {
     display: none;
-}
+}*/
 
 .feature-hr {
 
@@ -231,9 +333,10 @@ a {
         }
 }
 
-    /*ipad*/
-@media(min-width:768px) and (max-width:1435px) {
 
+
+    /*ipad*/
+@media(min-width:740px) and (max-width:1435px) {
 
     .lead-sentence {
         margin-top: 10px;
@@ -292,9 +395,17 @@ a {
    
 }     
 
-
+@media(min-width:1146px) and (max-width:1435px) {
+    .video {
+        margin-top: 112px;
+        margin-left: 60px;
+        margin-right: 150px !important;
+        width: 263px;
+        height: 146px; 
+    }
+}
 /*ipad portrait*/
-@media(min-width:768px) and (max-width:1000px) {
+@media(min-width:740px) and (max-width:1000px) {
 
     .macro-page {
         padding-top: 0 !important;
@@ -333,12 +444,25 @@ a {
         height: 280px;
     }
 
-   
+}
+
+@media(min-width:570px) and (max-width:767px) {
+    btn-intro {
+        margin-left: 0px !important;
+    }
+}
+
+@media(min-width:570px) and (max-width:767px) {
+        .video-image-small {
+        width: 395px !important; 
+        height: 243px !important; 
+        margin-left: 310px !important;
+    }
+
 }
 
 /*iphone plus landscape*/
 @media(min-width:570px) and (max-width:767px) {
-
 
         .macro-page {
         display: none;
@@ -362,12 +486,12 @@ a {
         line-height: 1.5;
     }
 
-
+/*
     .video-image-small {
         width: 295px !important; 
         height: 243px !important; 
         right: 210px !important;
-    }
+    }*/
 
     
     .btn-intro {
@@ -489,8 +613,7 @@ a {
         border: 0;
         width: 295px !important; 
         height: 243px !important; 
-        margin-bottom: 105px; 
-        right: 125px;
+        margin:auto !important; 
     }
 
     .video-small {
@@ -503,9 +626,8 @@ a {
     }
     
     .btn-intro {
-        margin-top: 10px;
-        text-align: center !important;
-        margin-left: 108px;
+        margin-left: 20px !important;
+        margin-top: 30px !important;
     }
     .arrow {
         display: none;
@@ -574,6 +696,11 @@ a {
      font-size: 40px;   
     }
     
+}
+
+
+@media(min-width:437px) and (max-width:559px) {
+
 }
 
 /*iphone plus portrait*/
@@ -663,24 +790,26 @@ a {
         z-index: -1;
         position: absolute;
         border: 0;
-        width: 295px !important; 
+        width: 275px !important; 
         height: 243px !important; 
-        margin-bottom: 105px; 
-        right: 59px;
+        margin: auto;
+         
     }
 
     .video-small {
         float: none !important;
         position: relative;
         margin-top: 48px;
-        height:152px;
-        width: 268px;
+
+        margin-left: 12px !important;
+        height:142px;
+        width: 250px;
     }
     
     .btn-intro {
-        margin-top: 10px;
+        margin-top: 40px;
         text-align: center !important;
-        margin-left: 40px;
+        margin-left: 10px;
     
     }
 
@@ -785,7 +914,6 @@ a {
     .micro-page{
         position: relative;
         margin-left: 15px;
-
     }
 
     .hr {
@@ -869,7 +997,8 @@ a {
     }
     
     .btn-intro {
-        margin-top: 20px;
+        margin-top: 35px;
+        margin-bottom: 10px;
         text-align: center !important;
     }
 
