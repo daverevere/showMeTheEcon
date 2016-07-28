@@ -17,5 +17,9 @@ app.config(function($routeProvider) {
         controller : "aboutCtrl"
 
     })
+    .when('/space', {
+        templateUrl: 'components/models/invaders.html'
+
+    })
     .otherwise("/");
 });
