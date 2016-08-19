@@ -21,10 +21,6 @@ h6 {
   font-size: 28px;
   letter-spacing: 1px;
 }
-
-h2{
-  font-size: 24px;
-}
 h3 {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -600,6 +596,14 @@ footer p {
   .topics-page .grade-hide {
     display: none;
   }
+
+  .topics-page .feature-topic .feature-image {
+  float: left;
+  margin-right: 10px;
+  margin-left: 15px;
+  margin-bottom: 25px;
+  width: 300px;
+}
 }
 .topics-page .resource-item {
   overflow-y: hidden;
@@ -619,6 +623,8 @@ footer p {
   height: 120px;
   float: left;
   margin-left: 10px;
+
+  
 }
 @media (max-width: 768px) {
   .topics-page .resource-item img {
@@ -670,9 +676,9 @@ footer p {
   background: #f4f4f4 !important;
   border-radius: 5px !important;
 }
-.topics-page .nav .nav-search {
+/*.topics-page .nav .nav-search {
   margin-left: 10px;
-}
+}*/
 .topics-page .topic-resources {
   width: 90%;
   color: #181818;
@@ -687,10 +693,16 @@ footer p {
 .topics-page .tabs-padding {
   padding: 0;
 }
-@media (min-width: 737px) and (max-width: 768px) {
-  .topics-page .feature-image {
-    width: 265px !important;
+
+@media (min-width: 768px) and (max-width: 861px) {
+.topics-page .search {
+  margin-left: 0 !important;
+  margin-top: 10px;
+    width: 34%;
   }
+}
+@media (min-width: 737px) and (max-width: 768px) {
+  
   .topics-page h1 {
     font-size: 38px !important;
   }
@@ -737,6 +749,14 @@ footer p {
     margin-bottom: 10px;
   }
 }
+
+@media (min-width: 581px) and (max-width: 707px) {
+  .topics-page .search {
+    margin-top: 10px;
+    width: 31%;
+  }
+}
+
 @media (min-width: 581px) and (max-width: 736px) {
   .topics-page .tabs-first {
     margin-right: 5px;
