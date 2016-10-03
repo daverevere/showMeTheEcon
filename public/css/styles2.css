@@ -359,7 +359,8 @@ a {
     }
 
     h1 {
-        font-size: 68px;
+        font-size: 80px;
+        margin-bottom: 75px;
     }
 
     .feature-margin {
@@ -372,17 +373,17 @@ a {
 
     .video-image {
     margin-top: 5px;
-        width: 320px;
-        height: 262px;
+        width: 420px;
+        height: 362px;
         right: 0;
         left: 49px;
     }
 
     .video {
-        width: 275px;
-        height: 155px;
-        margin-left: 55px;
-        margin-top: 110px;
+        width: 360px;
+        height: 204px;
+        margin-left: 63px;
+        margin-top: 135px;
         margin-right: 39px;
 
     }
@@ -399,11 +400,11 @@ a {
 
 @media(min-width:1146px) and (max-width:1435px) {
     .video {
-        margin-top: 112px;
-        margin-left: 60px;
-        margin-right: 150px !important;
-        width: 263px;
-        height: 146px; 
+        margin-top: 135px;
+        margin-left: 62px;
+        margin-right: 160px !important;
+        width: 363px;
+        height: 204px; 
     }
 }
 /*ipad portrait*/
