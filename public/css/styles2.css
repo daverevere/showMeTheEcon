@@ -57,6 +57,8 @@ p {
     padding-top: 50px;
 }
 
+
+
 h1 {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -67,6 +69,15 @@ h1 {
     display: inline-block;
     z-index: 0;
 }
+
+.topic-buttons {
+    border: none;
+    max-width: 90%;
+    height: auto;
+    
+}
+
+
 
 .video-image {
     z-index: -1;
@@ -286,10 +297,10 @@ a {
     font-size: 22px;
     line-height: 1.6;
     list-style: none;
-    z-index: 2;
-    position: absolute;
+    /*z-index: 2;
+    position: absolute;*/
     text-align: center;
-    padding-top: 60px;
+    padding-top: 10px;
     padding-left: 0;
     text-transform: uppercase;
 }
@@ -398,6 +409,14 @@ a {
    
 }     
 
+@media (max-width: 1200px) and (min-width: 1000px){
+
+.micro-logo {
+    width: 340px;
+}
+}
+
+
 @media(min-width:1146px) and (max-width:1435px) {
     .video {
         margin-top: 135px;
@@ -410,9 +429,7 @@ a {
 /*ipad portrait*/
 @media(min-width:769px) and (max-width:1000px) {
 
-    .macro-page {
-        padding-top: 0 !important;
-    }
+   
     h1 {
         font-size: 50px;
     }
